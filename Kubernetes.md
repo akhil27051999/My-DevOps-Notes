@@ -69,7 +69,7 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 - 💸 Cost efficiency
 - 🌀 Environment consistency
 
----
+
 
 # 🧠 1. Compute / Workload Resources
 
@@ -275,19 +275,7 @@ spec:
           restartPolicy: OnFailure
   ```        
 
-## ✅ Summary
-Resource	Use Case Example
-Pod	Single containerized app
-ReplicaSet	Maintain N pod replicas
-Deployment	Declarative app deployment & updates
-StatefulSet	Stateful apps like DBs
-DaemonSet	Monitoring/logging on all nodes
-Job	One-time data processing
-CronJob	Scheduled job (e.g. nightly cleanup)
-
 # 🔌 2. Networking Resources
-
----
 
 ## 📡 Service (ClusterIP)
 
