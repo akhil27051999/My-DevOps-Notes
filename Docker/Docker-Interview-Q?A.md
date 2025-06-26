@@ -1,4 +1,4 @@
-# 🐳 Docker Interview Questions (Concept-Wise)
+# 🐳 Docker Interview Questions
 
 This document contains the most commonly asked **Docker interview questions** grouped by concept and numbered clearly for quick revision.
 
