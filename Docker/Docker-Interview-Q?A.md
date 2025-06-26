@@ -179,8 +179,8 @@ This document contains the most commonly asked **Docker interview questions** gr
 
 ---
 
-> ✅ Recommended Practice:  
-> - Try building a full-stack app using Docker Compose.  
-> - Use Alpine-based images and multistage builds.  
-> - Implement health checks and secret management.
+## ✅ Recommended Practice:  
+ - Try building a full-stack app using Docker Compose.  
+ - Use Alpine-based images and multistage builds.  
+ - Implement health checks and secret management.
 
