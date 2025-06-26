@@ -91,7 +91,7 @@ docker build -t myapp:latest .
 
 ## 📂 Docker Compose Commands
 
-> Docker Compose allows you to define and run multi-container Docker applications using a single `docker-compose.yml` file.
+Docker Compose allows you to define and run multi-container Docker applications using a single `docker-compose.yml` file.
 
 | Command | Description |
 |---------|-------------|
@@ -105,7 +105,7 @@ docker build -t myapp:latest .
 
 ## 📊 Docker Logs & Monitoring
 
-> Monitor your running containers and services in real-time.
+Monitor your running containers and services in real-time.
 
 | Command | Description |
 |---------|-------------|
@@ -118,7 +118,7 @@ docker build -t myapp:latest .
 
 ## 🧼 Docker Cleanup Commands
 
-> Reclaim disk space by cleaning unused, dangling, or stopped Docker resources.
+Reclaim disk space by cleaning unused, dangling, or stopped Docker resources.
 
 | Command | Description |
 |---------|-------------|
