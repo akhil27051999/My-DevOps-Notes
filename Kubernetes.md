@@ -191,7 +191,7 @@ spec:
             - containerPort: 80
 ```
 
-##🛡️ 5. DaemonSet
+## 🛡️ 5. DaemonSet
 **Definition:**  
 Ensures a Pod runs on every node (or selected nodes) in the cluster. Commonly used for log collection, monitoring agents, etc.
 
