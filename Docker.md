@@ -1,4 +1,4 @@
-# 🐳 Complete Docker Concepts for Interview Preparation (99% Coverage)
+# 🐳 Complete Docker Concepts for Interview Preparation
 
 This section covers everything you need to master Docker for interviews—concepts, commands, architecture, use cases, troubleshooting, and most-asked interview questions.
 
