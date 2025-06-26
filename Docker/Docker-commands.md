@@ -128,4 +128,4 @@ Reclaim disk space by cleaning unused, dangling, or stopped Docker resources.
 | `docker volume prune` | Delete all unused volumes. |
 | `docker builder prune` | Clean up the build cache used by Docker image builds. |
 
----
+
