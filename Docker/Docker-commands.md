@@ -87,6 +87,7 @@
 
 ```bash
 docker build -t myapp:latest .
+```
 
 ## 📂 Docker Compose Commands
 
