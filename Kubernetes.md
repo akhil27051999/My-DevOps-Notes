@@ -501,6 +501,309 @@ spec:
         claimName: my-pvc
 ```
 
+# 🔐 4. Security & Access Control
+
+## 📄 ConfigMap
+
+**Definition:**  
+Stores non-sensitive config data in key-value format. Useful for app configuration.
+
+**Use Case:**  
+Pass environment variables or files to containers.
+
+**YAML:**
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap
+data:
+  APP_ENV: production
+  DB_HOST: db-service
+
+```
+
+## 🧬 Mount ConfigMap in Pod
+**Use Case:**
+Inject configuration into Pods via environment variables or volume mounts.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-using-configmap
+spec:
+  containers:
+    - name: myapp
+      image: myapp:latest
+      env:
+        - name: APP_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: my-configmap
+              key: APP_ENV
+      volumeMounts:
+        - mountPath: "/etc/config"
+          name: config-volume
+  volumes:
+    - name: config-volume
+      configMap:
+        name: my-configmap
+```
+
+## 🔐 Secret
+
+**Definition:**
+Stores sensitive information like credentials, tokens, SSH keys in base64 encoded format.
+
+**Use Case:**
+Inject secrets into Pods securely.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-secret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: cGFzc3dvcmQ=
+```
+
+## 🔐 Mount Secret in Pod
+**Use Case:**
+Use secrets as environment variables or files in containers.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-using-secret
+spec:
+  containers:
+    - name: myapp
+      image: myapp:latest
+      env:
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: username
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: password
+```
+# 🛡 5. Access Control (RBAC)
+
+## 🧾 ServiceAccount
+**Use Case:**
+Provides identity to a Pod for Kubernetes API interaction.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-serviceaccount
+```
+## 👤 Role
+**Use Case:**
+Defines permissions (get/list/watch) in a namespace.
+
+**YAML:**
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "watch", "list"]
+```
+## 🔗 RoleBinding
+**Use Case:**
+Assign a Role to a user/group/ServiceAccount in a namespace.
+
+**YAML:**
+
+```yaml
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-pods
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: my-serviceaccount
+    namespace: default
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+```
+## 🌐 ClusterRole
+**Use Case:**
+Define global (cluster-wide) permissions.
+
+**YAML:**
+
+```yaml
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-admin
+rules:
+  - apiGroups: [""]
+    resources: ["*"]
+    verbs: ["*"]
+```
+## 🌐 ClusterRoleBinding
+**Use Case:**
+Assign a ClusterRole across the cluster to ServiceAccounts/users.
+
+**YAML:**
+
+```yaml
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-admin-binding
+subjects:
+  - kind: ServiceAccount
+    name: my-serviceaccount
+    namespace: default
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+```
+
+# 🧩 6. Miscellaneous Resources
+## 🗂 Namespace
+**Definition:**
+Isolates resources by team or environment.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev-environment
+```
+
+## 🚫 ResourceQuota
+**Use Case:**
+Limit CPU/Memory usage to prevent abuse.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev-environment
+spec:
+  hard:
+    requests.cpu: "2"
+    requests.memory: 1Gi
+    limits.cpu: "4"
+    limits.memory: 2Gi
+```
+
+## 📏 LimitRange
+**Use Case:**
+Enforce CPU/Memory default limits per container.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limit-range
+  namespace: dev-environment
+spec:
+  limits:
+    - default:
+        cpu: 500m
+        memory: 512Mi
+      defaultRequest:
+        cpu: 250m
+        memory: 256Mi
+      type: Container
+```
+
+## ⚖ HorizontalPodAutoscaler (HPA)
+**Use Case:**
+Auto-scale pods based on CPU/memory usage.
+
+**YAML:**
+
+```yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: myapp-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-deployment
+  minReplicas: 2
+  maxReplicas: 5
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
+```
+
+## 🚨 PodDisruptionBudget (PDB)
+**Use Case:**
+Maintain service availability during voluntary disruptions.
+
+**YAML:**
+
+```yaml
+
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: myapp-pdb
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: myapp
+```
+
+
 
 
 
