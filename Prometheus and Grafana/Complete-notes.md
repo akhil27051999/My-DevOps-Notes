@@ -19,15 +19,15 @@ Prometheus is an open-source systems monitoring and alerting toolkit originally 
 
 ### 3. Core Concepts
 
-| Term            | Description                                                                            |
-| --------------- | -------------------------------------------------------------------------------------- |
-| **Time Series** | Stream of timestamped values belonging to the same metric and label set.               |
-| **Metric**      | A numeric measurement with optional labels. E.g., `http_requests_total{method="GET"}`. |
-| **Labels**      | Key-value pairs that distinguish different series of the same metric.                  |
-| **Scrape**      | Prometheus pulls metrics from targets at defined intervals.                            |
-| **Target**      | A monitored endpoint that exposes metrics.                                             |
-| **Job**         | A group of targets with similar functions (e.g., all Node Exporters).                  |
-| **Instance**    | A single target (IP\:port).                                                            |
+| Term            | Description                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| **Time Series** | Stream of timestamped values belonging to the same metric and label set.                 |
+| **Metric**      | A numeric measurement with optional labels. E.g., `http_requests_total{method=\"GET\"}`. |
+| **Labels**      | Key-value pairs that distinguish different series of the same metric.                    |
+| **Scrape**      | Prometheus pulls metrics from targets at defined intervals.                              |
+| **Target**      | A monitored endpoint that exposes metrics.                                               |
+| **Job**         | A group of targets with similar functions (e.g., all Node Exporters).                    |
+| **Instance**    | A single target (IP\:port).                                                              |
 
 ### 4. Data Model
 
@@ -113,16 +113,26 @@ annotations:
   summary: "High CPU usage detected"
 ```
 
-### 10. Retention, Performance & Best Practices
+#### alertmanager.yml Example (Slack Notification)
 
-* Reduce cardinality (avoid labels with high uniqueness).
-* Configure retention:
+```yaml
+global:
+  resolve_timeout: 5m
+  slack_api_url: 'https://hooks.slack.com/services/XXXX/XXXX/XXXX'
 
-  ```bash
-  --storage.tsdb.retention.time=15d
-  ```
-* Use recording rules for expensive queries.
-* Scale using Thanos or Cortex.
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 5m
+  repeat_interval: 3h
+  receiver: 'slack-notifications'
+
+receivers:
+  - name: 'slack-notifications'
+    slack_configs:
+      - channel: '#alerts'
+        send_resolved: true
+```
 
 ---
 
@@ -165,7 +175,7 @@ Default credentials: `admin / admin`
 
 1. Go to **Configuration > Data Sources**
 2. Click **Add data source**, select **Prometheus**
-3. Enter `http://localhost:9090`, click **Save & Test**
+3. Enter `http://localhost:9090`, click \*\*Save & Test\`
 
 ### 5. Dashboard Basics
 
@@ -227,6 +237,55 @@ Default credentials: `admin / admin`
 
 ---
 
+## 📚 End-to-End Monitoring Setup for Microservices
+
+### Scenario: Monitor a 3-tier microservices app (frontend, backend, database)
+
+#### Tools:
+
+* **Prometheus**: Metrics scraping
+* **Node Exporter**: OS metrics from all services
+* **Custom metrics**: Via Prometheus client libraries (Python, Go, Java)
+* **Grafana**: Visualization
+* **Alertmanager**: Notification handling
+
+#### Setup Steps:
+
+1. **Instrument code** using Prometheus libraries:
+
+   * `prometheus_client` for Python
+   * `prometheus-client` for Java
+2. **Expose /metrics endpoint** from each service.
+3. **Deploy Node Exporter** on each node.
+4. **Configure Prometheus**:
+
+   ```yaml
+   scrape_configs:
+     - job_name: 'frontend'
+       static_configs:
+         - targets: ['frontend-svc:8000']
+     - job_name: 'backend'
+       static_configs:
+         - targets: ['backend-svc:9000']
+     - job_name: 'database'
+       static_configs:
+         - targets: ['db-svc:9104']
+   ```
+5. **Deploy Alertmanager** and configure routes.
+6. **Create dashboards in Grafana**:
+
+   * Latency panels using `rate(http_request_duration_seconds_sum[1m]) / rate(http_request_duration_seconds_count[1m])`
+   * Error rate panels using `rate(http_requests_total{status=~"5.."}[5m])`
+   * DB metrics like QPS, connections
+7. **Define alerts**:
+
+   * CPU > 80%
+   * Request latency > 2s
+   * Error rate > 5%
+8. **Integrate Slack/Email** in Alertmanager.
+
+---
+
 ## 📚 References
 
 * Prometheus Docs: [https://prometheus.io/docs](https://prometheus.io/docs)
@@ -236,8 +295,4 @@ Default credentials: `admin / admin`
 
 ---
 
-Let me know if you need:
-
-* Kubernetes + Prometheus + Grafana full setup
-* Prometheus Alertmanager examples
-* End-to-end monitoring setup for microservices
+Let me know if you want full Kubernetes monitoring with Helm and kube-prometheus-stack.
