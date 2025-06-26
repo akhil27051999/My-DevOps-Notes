@@ -71,6 +71,7 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 
 ---
 
+# 🧠 1. Compute / Workload Resources
 
 ## 📦 1. Pod
 
@@ -283,6 +284,237 @@ StatefulSet	Stateful apps like DBs
 DaemonSet	Monitoring/logging on all nodes
 Job	One-time data processing
 CronJob	Scheduled job (e.g. nightly cleanup)
+
+# 🔌 2. Networking Resources
+
+---
+
+## 📡 Service (ClusterIP)
+
+**Definition:**  
+A `Service` provides a stable internal endpoint for accessing a group of Pods. The `ClusterIP` type is the default, and is only accessible from within the cluster.
+
+**Use Case:**  
+Internal communication between microservices or applications.
+
+**YAML:**
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-clusterip-service
+spec:
+  type: ClusterIP
+  selector:
+    app: myapp
+  ports:
+    - port: 80
+      targetPort: 8080
+```
+
+## 🌐 Service (NodePort)
+**Definition:**  
+Exposes the service on each node’s IP at a static port (30000–32767). Useful for development/testing or when not using a cloud provider.
+
+**Use Case:** 
+External access to services without using Ingress.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nodeport-service
+spec:
+  type: NodePort
+  selector:
+    app: myapp
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30080
+```
+
+## ☁️ Service (LoadBalancer)
+**Definition:**  
+Creates an external load balancer (in supported cloud environments) to route traffic to the service.
+
+**Use Case:** 
+Production-grade access from the internet via a cloud provider’s load balancer.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-lb-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: myapp
+  ports:
+    - port: 80
+      targetPort: 8080
+```
+## 🧭 Ingress
+**Definition:**  
+An Ingress manages external HTTP/HTTPS access to services. It allows SSL termination, path-based routing, and domain-based routing.
+
+**Use Case:** 
+Expose multiple services via a single external IP with routing rules.
+
+**YAML:**
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+    - host: myapp.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-clusterip-service
+                port:
+                  number: 80
+```
+
+## 🔐 NetworkPolicy
+**Definition:**
+Defines rules for ingress and egress traffic between Pods. By default, Kubernetes allows all traffic; NetworkPolicy lets you restrict access.
+
+**Use Case:**
+Secure Pod-to-Pod communication, limit access by labels or namespaces.
+
+**YAML:**
+
+```yaml
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+spec:
+  podSelector:
+    matchLabels:
+      role: frontend
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              role: backend
+```
+
+# 💾 3. Storage Resources
+
+## 📦 PersistentVolume (PV)
+**Definition:**
+A PersistentVolume (PV) is a piece of storage in the cluster, provisioned manually or dynamically. It provides storage to Pods.
+
+**Use Case:**
+Define available storage resources in the cluster.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+```
+
+## 📨 PersistentVolumeClaim (PVC)
+**Definition:**
+A PersistentVolumeClaim (PVC) is a request for storage by a Pod. It binds to an available PV that matches the request.
+
+**Use Case:**
+Claiming storage from a PV for use inside a container.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
+```
+
+## 🧱 StorageClass
+**Definition:**
+A StorageClass enables dynamic provisioning of PersistentVolumes. Different classes can define different types of storage (e.g., SSD, HDD).
+
+**Use Case:**
+Provision PVs on demand using different performance tiers.
+
+**YAML:**
+
+```yaml
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: fast-storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+```
+
+## 🔗 VolumeMount (in Pod)
+**Definition:**
+A VolumeMount is used to mount a PVC into a container at a specified path.
+
+**Use Case:**
+Attach persistent storage to a container.
+
+**YAML:**
+
+```yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-volume
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: html-volume
+  volumes:
+    - name: html-volume
+      persistentVolumeClaim:
+        claimName: my-pvc
+```
+
+
+
 
 
 
