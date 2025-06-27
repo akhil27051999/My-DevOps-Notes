@@ -580,64 +580,64 @@ AWS and the customer share responsibility for security and compliance.
 
 Six perspectives:
 
-* **💼 Business Perspective** – Aligns IT with business needs.
+1. **💼 Business Perspective** – Aligns IT with business needs.
 
   * Roles: Business managers, Finance managers, Budget owners, Strategy stakeholders
 
-* **👥 People Perspective** – Develops org-wide change strategy.
+2. **👥 People Perspective** – Develops org-wide change strategy.
 
   * Roles: HR, Staffing, People managers
 
-* **📊 Governance Perspective** – Aligns IT and business strategy.
+3. **📊 Governance Perspective** – Aligns IT and business strategy.
 
   * Roles: CIO, Program managers, Enterprise architects, Business analysts
 
-* **🖥️ Platform Perspective** – Migration and new cloud solution design.
+4. **🖥️ Platform Perspective** – Migration and new cloud solution design.
 
   * Roles: CTO, IT managers, Solution architects
 
-* **🔐 Security Perspective** – Ensures visibility, auditability, control.
+5. **🔐 Security Perspective** – Ensures visibility, auditability, control.
 
   * Roles: CTO, IT managers, IT security analysts
 
-* **🔧 Operational Perspective** – Run and recover IT workloads.
+6. **🔧 Operational Perspective** – Run and recover IT workloads.
 
   * Roles: IT ops managers, IT support managers
 
 ## 🚀 Migration Strategies – The 6 R’s
 
-1. **🔄 Rehosting** – lift and shift
-2. **🔧 Re-platforming** – minor tweaks for cloud optimizations
-3. **🏗️ Refactoring/Re-architecting** – rebuild with cloud-native features
-4. **🛒 Repurchasing** – move to SaaS model
-5. **📦 Retaining** – keep in current environment
-6. **🗑️ Retiring** – remove obsolete apps
+1. **Rehosting** – lift and shift
+2. **Re-platforming** – minor tweaks for cloud optimizations
+3. **Refactoring/Re-architecting** – rebuild with cloud-native features
+4. **Repurchasing** – move to SaaS model
+5. **Retaining** – keep in current environment
+6. **Retiring** – remove obsolete apps
 
 ## 📦 AWS Snow Family
 
-* **🧊 Snowcone** – small edge device (2 CPUs, 4GB RAM, 8TB storage)
+1. **Snowcone** – small edge device (2 CPUs, 4GB RAM, 8TB storage)
 
-* **❄️ Snowball** – larger scale
+2. **Snowball** – larger scale
 
   * *Storage Optimized*: 80TB HDD + 1TB SSD, 40 vCPUs, 80 GiB RAM
   * *Compute Optimized*: 42TB HDD, 7.68TB NVMe SSD, 52 vCPUs, 208 GiB RAM, optional GPU
 
-* **🚛 Snowmobile** – 45-foot truck, up to 100PB per unit
+3. **Snowmobile** – 45-foot truck, up to 100PB per unit
 
 ## 💡 Innovate with AWS
 
 * **Desired outcomes**: Know current state, desired state, problem to solve
 
-* **☁️ Serverless** – no provisioning, automatic scaling, fault tolerance
+1. **☁️ Serverless** – no provisioning, automatic scaling, fault tolerance
 
-* **🧠 Artificial Intelligence** – Services:
+2. **🧠 Artificial Intelligence** – Services:
 
   * Amazon Transcribe (speech-to-text)
   * Amazon Comprehend (text patterns)
   * Amazon Fraud Detector (detect fraud)
   * Amazon Lex (chatbots)
 
-* **🤖 Machine Learning** – Amazon SageMaker for fast ML development
+3. **🤖 Machine Learning** – Amazon SageMaker for fast ML development
 
   * Predict outcomes, analyze data, solve complex problems
 
@@ -648,12 +648,12 @@ Six perspectives:
 
 Helps us design and operate reliable, secure, efficient, and cost-effective systems:
 
-1. **⚙️ Operational Excellence** – Run and monitor systems to deliver business value and improve continuously
-2. **🔐 Security** – Protect information and systems with risk mitigation strategies
-3. **🔁 Reliability** – Recover from failures and scale with demand
-4. **⚡ Performance Efficiency** – Use computing resources efficiently as demand evolves
-5. **💸 Cost Optimization** – Deliver value at the lowest cost
-6. **🌱 Sustainability** – Reduce energy consumption and improve resource efficiency
+1. **Operational Excellence** – Run and monitor systems to deliver business value and improve continuously
+2. **Security** – Protect information and systems with risk mitigation strategies
+3. **Reliability** – Recover from failures and scale with demand
+4. **Performance Efficiency** – Use computing resources efficiently as demand evolves
+5. **Cost Optimization** – Deliver value at the lowest cost
+6. **Sustainability** – Reduce energy consumption and improve resource efficiency
 
 ## ☁️ Benefits of the AWS Cloud
 
@@ -666,37 +666,37 @@ Six key advantages:
 5. Eliminate data center maintenance
 6. Go global in minutes
 
-## 📊 AWS Config
+### 📊 AWS Config
 
 * Provides historical and real-time view of AWS resource configuration
 * Track configuration changes over time
 
-## 🔐 Amazon Cognito
+### 🔐 Amazon Cognito
 
 * User authentication, authorization, and management
 * Supports direct login or federated identity (Google, Facebook, Apple)
 * **User pools** for sign-up/sign-in, **Identity pools** for AWS access
 
-## 🏛️ AWS Organizations
+### 🏛️ AWS Organizations
 
 * Manage and consolidate multiple AWS accounts
 * Centralized billing and policy enforcement
 
-## 💡 Amazon LightSail
+### 💡 Amazon LightSail
 
 * Simplified server deployment with automatic networking and security setup
 
-## 🧮 AWS Batch
+### 🧮 AWS Batch
 
 * Run batch computing jobs without managing infrastructure
 * Automatically provisions compute as needed
 
-## 🧾 AWS CloudTrail Logs
+### 🧾 AWS CloudTrail Logs
 
 * Track AWS API activity across accounts
 * Delivers logs to S3 or CloudTrail Lake
 
-## 💻 AWS Code Tools
+### 💻 AWS Code Tools
 
 * **CodeStar** – unified UI for software dev lifecycle
 * **CodeCommit** – managed Git source control
