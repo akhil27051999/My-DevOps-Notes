@@ -463,7 +463,7 @@ AWS and the customer share responsibility for security and compliance.
 
 # 📊 Module 7: Monitoring
 
-## 🌐 Amazon CloudWatch
+### 🌐 Amazon CloudWatch
 
 * Monitors AWS services and custom app metrics
 * Visualize performance over time via graphs
@@ -478,7 +478,7 @@ AWS and the customer share responsibility for security and compliance.
 * Unified view for metrics from different resources (EC2, S3, etc.)
 * Customizable per team, app, or purpose
 
-## 📊 AWS CloudTrail
+### 📊 AWS CloudTrail
 
 * Records API activity across your account
 * Tracks user identity, timestamp, source IP, and event details
@@ -488,7 +488,7 @@ AWS and the customer share responsibility for security and compliance.
 * Detects unusual API behavior (e.g., spike in EC2 launches)
 * Provides deeper context for anomalies
 
-## 🧰 AWS Trusted Advisor
+### 🧰 AWS Trusted Advisor
 
 * Offers real-time recommendations based on best practices
 * Categories: Cost, Performance, Security, Fault Tolerance, Service Limits
