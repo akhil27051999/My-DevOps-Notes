@@ -307,12 +307,6 @@ Factors to consider:
 
 ---
 
-# ☁️ AWS: Practical Examples
-
-This README contains a curated set of beginner-to-intermediate AWS tasks and concepts to help you learn AWS infrastructure and services with real-world analogies.
-
----
-
 ## 📊 Module 5: Storage and Database
 
 ### 📂 Instance Stores
@@ -338,7 +332,7 @@ In object storage, each object consists of:
 * **Metadata**: Info about the data (type, size, usage)
 * **Key**: Unique identifier
 
-### 💾 Amazon S3 (Simple Storage Service)
+### 📀 Amazon S3 (Simple Storage Service)
 
 Amazon S3 stores data as **objects in buckets** and offers:
 
@@ -418,4 +412,48 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * **DynamoDB Accelerator (DAX)**: In-memory cache for DynamoDB
 
 ---
+
+## 🔐 Module 6: Security
+
+...\[content as before]...
+
+---
+
+## 📊 Module 7: Monitoring
+
+### 🌐 Amazon CloudWatch
+
+* Monitors AWS services and custom app metrics
+* Visualize performance over time via graphs
+
+**CloudWatch Alarms:**
+
+* Trigger alerts or actions when metrics breach thresholds
+* Example: Auto-stop EC2 instance if CPU < 5% for 15 mins
+
+**CloudWatch Dashboards:**
+
+* Unified view for metrics from different resources (EC2, S3, etc.)
+* Customizable per team, app, or purpose
+
+### 📊 AWS CloudTrail
+
+* Records API activity across your account
+* Tracks user identity, timestamp, source IP, and event details
+
+**CloudTrail Insights:**
+
+* Detects unusual API behavior (e.g., spike in EC2 launches)
+* Provides deeper context for anomalies
+
+### 🧰 AWS Trusted Advisor
+
+* Offers real-time recommendations based on best practices
+* Categories: Cost, Performance, Security, Fault Tolerance, Service Limits
+
+**Dashboard Indicators:**
+
+* ✅ Green: No issues
+* ⚠️ Orange: Investigation suggested
+* ❌ Red: Action required
 
