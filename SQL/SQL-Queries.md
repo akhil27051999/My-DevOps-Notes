@@ -1,4 +1,4 @@
-# SQL Queries for Interviews
+# 📘 SQL Queries for Interviews
 
 1. **What is the difference between `WHERE` and `HAVING` clause?**
 
