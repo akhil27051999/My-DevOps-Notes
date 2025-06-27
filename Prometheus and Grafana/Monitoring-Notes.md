@@ -211,7 +211,6 @@ Default credentials: `admin / admin`
 | Data source error  | Wrong URL               | Use `curl <URL>` to check connection |
 | Dashboard slowness | Too many queries/panels | Use intervals, query optimization    |
 
----
 
 ## 🔐 Best Practices
 
@@ -229,7 +228,6 @@ Default credentials: `admin / admin`
 * Backup dashboards regularly.
 * Configure access control (Viewer, Editor, Admin).
 
----
 
 ## 📚 End-to-End Monitoring Setup for Microservices
 
