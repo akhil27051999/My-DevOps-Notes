@@ -11,7 +11,6 @@
 * Faster development cycles
 * Better collaboration and code quality
 
----
 
 ## 📘 2. What is Continuous Delivery (CD) vs Continuous Deployment?
 
@@ -23,7 +22,6 @@
 * Delivery = Manual push to production
 * Deployment = Automated push to production
 
----
 
 ## 📘 3. What is the Purpose of a CI/CD Pipeline?
 
@@ -36,7 +34,6 @@
 * Faster and reliable delivery
 * Minimal downtime and rollback support
 
----
 
 ## ⚠️ 4. Handling CI/CD Failures
 
@@ -44,8 +41,6 @@
 * Configure **Slack/email notifications**
 * Enable **manual approval gates**
 * Apply strategies like retries or Blue/Green/Canary deployment
-
----
 
 ## 🛠️ 5. Typical CI/CD Pipeline Steps
 
@@ -58,7 +53,6 @@
 7. **Production Deployment**
 8. **Post-Deployment Checks**
 
----
 
 ## 🔧 6. Tools for CI/CD Pipelines
 
@@ -71,7 +65,6 @@
 * ArgoCD (GitOps)
 * Spinnaker
 
----
 
 ## 📦 7. Docker in CI/CD
 
@@ -80,7 +73,6 @@
 * Supports parallel testing
 * Simplifies deployment with containers
 
----
 
 ## 🔒 8. Versioning the Pipeline Itself
 
@@ -88,15 +80,12 @@
 * Use Terraform/Ansible for infrastructure as code
 * Version control all scripts and build logic
 
----
 
 ## 🌍 9. Multi-Environment Deployment
 
 * Use environment variables/configs for Dev, Test, Prod
 * Include approval gates
 * Apply Infra-as-Code (Terraform, Helm)
-
----
 
 ## 🔐 10. CI/CD Security Best Practices
 
@@ -105,14 +94,12 @@
 * Role-based access control
 * Enable audit logging and approvals
 
----
 
 ## 🧾 11. Pipeline as Code
 
 * Define pipelines in versioned code (e.g. Jenkinsfile, .gitlab-ci.yml)
 * Enables reproducibility, versioning, collaboration
 
----
 
 ## 📈 12. Role of Continuous Monitoring
 
@@ -120,7 +107,6 @@
 * Monitor deployments, performance, uptime
 * Detect regressions early
 
----
 
 # 🔎 Real-World CI/CD Troubleshooting Scenarios
 
@@ -131,7 +117,6 @@
 * Rollback to previous version if needed
 * Verify configs and dependencies
 
----
 
 ## 2. 🐢 High Latency in Production
 
@@ -141,7 +126,6 @@
 * Check load balancer and DNS
 * Scale horizontally or vertically if needed
 
----
 
 ## 3. 🔥 Service Downtime Due to Resource Exhaustion
 
@@ -150,7 +134,6 @@
 * Adjust Kubernetes resource limits or VM size
 * Optimize app code and DB queries
 
----
 
 ## 4. 🚀 Zero Downtime Deployments
 
@@ -158,7 +141,6 @@
 * Ensure load balancers handle traffic split
 * Apply backward-compatible DB migrations
 
----
 
 ## 5. 🧨 Service Crash After DB Upgrade
 
@@ -168,7 +150,6 @@
 * Revert DB version if needed
 * Reproduce in staging
 
----
 
 ## 6. 🌐 Intermittent Network Issues
 
@@ -177,7 +158,6 @@
 * Use ping/traceroute/netstat for debugging
 * Add retry logic and timeout configurations
 
----
 
 ## 7. 🧠 Memory Leak in Production
 
@@ -186,7 +166,6 @@
 * Analyze GC logs and heap dumps
 * Patch and redeploy with optimized memory management
 
----
 
 ## 8. 🔒 Database Locking Issues
 
