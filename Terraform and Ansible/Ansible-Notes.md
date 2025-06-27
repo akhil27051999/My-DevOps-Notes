@@ -183,7 +183,6 @@ handlers:
   * Ensure `gather_facts: true`.
   * Manually gather with `setup` module.
 
----
 
 ## ✅ Best Practices
 
