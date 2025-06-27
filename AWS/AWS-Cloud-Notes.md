@@ -235,7 +235,7 @@ Distributes incoming traffic across EC2 instances.
 * Isolated section of AWS Cloud to launch resources
 * Group resources using subnets (public/private)
 
-### 🌍 Internet Gateway & VPN Gateway
+## 🌍 Internet Gateway & VPN Gateway
 
 * **Internet Gateway**: Enables public access to VPC
 * **Virtual Private Gateway**: Connects VPC to on-prem via VPN
