@@ -174,7 +174,3 @@
 * Tune isolation levels
 * Apply indexing and query optimization
 * Handle deadlocks in code
-
----
-
-> 💡 This cheat sheet is ideal for interview prep and real-world DevOps scenarios. Want the next one on Jenkins or Kubernetes?
