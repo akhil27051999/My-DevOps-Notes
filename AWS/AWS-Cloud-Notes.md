@@ -61,33 +61,28 @@ Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering se
 
 #### ⚖️ General Purpose
 
-Balanced compute, memory, and networking.
-
+* Balanced compute, memory, and networking.
 * Use cases: app servers, small DBs, game servers
 
 #### 💪 Compute Optimized
 
-High-performance processors.
-
+* High-performance processors.
 * Use cases: high-performance web servers, batch processing
 
 #### 🧠 Memory Optimized
 
-Designed for in-memory workloads.
-
+* Designed for in-memory workloads.
 * Use cases: real-time analytics, large databases
 
 #### 🚀 Accelerated Computing
 
-Uses hardware accelerators (GPUs, FPGAs).
-
+* Uses hardware accelerators (GPUs, FPGAs).
 * Use cases: ML, graphics, pattern matching
 
 #### 🗄️ Storage Optimized
 
-Optimized for large sequential I/O.
-
-* Use cases: data warehousing, OLTP
+* Optimized for large sequential I/O.
+*  Use cases: data warehousing, OLTP
 
 
 ## 💰 EC2 Pricing Options
