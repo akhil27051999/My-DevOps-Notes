@@ -137,7 +137,3 @@
 
 📌 **Pro Tip**: Always start with `kubectl get <resource>` → then `describe` → then `logs` or `exec` to debug!
 
----
-
-> Created for interview prep and production reference. Keep practicing `kubectl` daily 💪
-
