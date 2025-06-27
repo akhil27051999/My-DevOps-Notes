@@ -580,28 +580,34 @@ AWS and the customer share responsibility for security and compliance.
 
 Six perspectives:
 
-1. **💼 Business Perspective** – Aligns IT with business needs.
+#### 1. 💼 Business Perspective
 
+  * Aligns IT with business needs.
   * Roles: Business managers, Finance managers, Budget owners, Strategy stakeholders
 
-2. **👥 People Perspective** – Develops org-wide change strategy.
+#### 2. 👥 People Perspective
 
+  * Develops org-wide change strategy.
   * Roles: HR, Staffing, People managers
 
-3. **📊 Governance Perspective** – Aligns IT and business strategy.
-
+#### 3. 📊 Governance Perspective
+   
+  * Aligns IT and business strategy.
   * Roles: CIO, Program managers, Enterprise architects, Business analysts
 
-4. **🖥️ Platform Perspective** – Migration and new cloud solution design.
+#### 4. 🖥️ Platform Perspective
 
+  * Migration and new cloud solution design.
   * Roles: CTO, IT managers, Solution architects
 
-5. **🔐 Security Perspective** – Ensures visibility, auditability, control.
-
+#### 5. 🔐 Security Perspective
+ 
+  * Ensures visibility, auditability, control.
   * Roles: CTO, IT managers, IT security analysts
 
-6. **🔧 Operational Perspective** – Run and recover IT workloads.
+#### 6.🔧 Operational Perspective
 
+  * Run and recover IT workloads.
   * Roles: IT ops managers, IT support managers
 
 ## 🚀 Migration Strategies – The 6 R’s
@@ -628,18 +634,21 @@ Six perspectives:
 
 * **Desired outcomes**: Know current state, desired state, problem to solve
 
-1. **☁️ Serverless** – no provisioning, automatic scaling, fault tolerance
+###☁️ Serverless
+   
+   – no provisioning, automatic scaling, fault tolerance
 
-2. **🧠 Artificial Intelligence** – Services:
+###🧠 Artificial Intelligence – Services
 
   * Amazon Transcribe (speech-to-text)
   * Amazon Comprehend (text patterns)
   * Amazon Fraud Detector (detect fraud)
   * Amazon Lex (chatbots)
 
-3. **🤖 Machine Learning** – Amazon SageMaker for fast ML development
+###🤖 Machine Learning
 
-  * Predict outcomes, analyze data, solve complex problems
+  * Amazon SageMaker for fast ML development
+  * Predict outcomes, analyze data, solve complex problems.
 
 
 # 🧭 Module 10:  The Cloud Journey
