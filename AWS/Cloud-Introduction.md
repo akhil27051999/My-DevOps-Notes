@@ -184,7 +184,7 @@ Distributes incoming traffic across EC2 instances.
 
 ## 🔠 AWS Global Infrastructure
 
-#### 🌍 Selecting a Region
+### 🌍 Selecting a Region
 
 Factors to consider:
 
