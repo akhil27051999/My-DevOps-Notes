@@ -1,7 +1,5 @@
 # 📘 Ansible Concepts & Troubleshooting Guide
 
----
-
 ## 🔧 Ansible Core Concepts
 
 ### 1. **What is Ansible?**
