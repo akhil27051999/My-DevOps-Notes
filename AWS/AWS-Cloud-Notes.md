@@ -47,7 +47,7 @@ A **client** is an application (like a browser or desktop app) that sends reques
 
 # 🖥️ Module 2: Amazon EC2
 
-### Amazon EC2?
+### 🖥️ Amazon EC2
 
 Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering secure and resizable compute capacity.
 
