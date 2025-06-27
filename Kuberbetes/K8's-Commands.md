@@ -1,6 +1,6 @@
 # 📘 Kubernetes Commands Cheat Sheet with Explanations
 
-> A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands, organized by resource type and use case, with clear explanations for each.
+A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands, organized by resource type and use case, with clear explanations for each.
 
 ---
 
