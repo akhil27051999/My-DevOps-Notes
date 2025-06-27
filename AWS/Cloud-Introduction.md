@@ -58,7 +58,7 @@ Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering se
 * Launch in minutes, terminate anytime
 * Pay only for what you use
 
-### 💡 EC2 Instance Types
+## 💡 EC2 Instance Types
 
 #### General Purpose
 
@@ -203,8 +203,6 @@ Factors to consider:
 
 * Content cached close to users via Amazon CloudFront
 
----
-
 ## 🔧 Management Interfaces
 
 ### AWS Management Console
@@ -250,7 +248,7 @@ Factors to consider:
 * **Internet Gateway**: Enables public access to VPC
 * **Virtual Private Gateway**: Connects VPC to on-prem via VPN
 
-#$# 🚪 AWS Direct Connect
+### 🚪 AWS Direct Connect
 
 * Private dedicated connection to AWS
 * Bypasses public internet, increases reliability and bandwidth
