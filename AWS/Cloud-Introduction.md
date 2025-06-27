@@ -48,7 +48,7 @@ A **client** is an application (like a browser or desktop app) that sends reques
 
 # ⚙️ Module 2: Amazon EC2
 
-## 💜 Amazon EC2?
+## 🖥️ Amazon EC2?
 
 Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering secure and resizable compute capacity.
 
@@ -205,17 +205,17 @@ Factors to consider:
 
 ## 🔧 Management Interfaces
 
-### AWS Management Console
+### 🖥️ AWS Management Console
 
 * Web UI to manage AWS services
 * Includes wizards, automation, and mobile app
 
-### AWS CLI
+### 💻 AWS CLI
 
 * Command-line access to AWS APIs
 * Supports automation and scripting
 
-### SDKs
+### 🧑‍💻 SDKs
 
 * Access AWS via programming languages (Java, Python, .NET, etc)
 * Build apps that integrate directly with AWS
@@ -223,12 +223,12 @@ Factors to consider:
 
 ## 🏠 Infrastructure as Code Tools
 
-### AWS Elastic Beanstalk
+### 🌱 AWS Elastic Beanstalk
 
 * Deploy apps using code/configs
 * Supports: load balancing, auto scaling, health monitoring
 
-### AWS CloudFormation
+### 🏗️ AWS CloudFormation
 
 * Treat infrastructure as code
 * Safely and repeatedly deploy stacks
@@ -255,17 +255,17 @@ Factors to consider:
 
 ## 📦 Subnets and Network Access Control
 
-### Subnets
+### 🌐 Subnets
 
 * **Public**: Internet-facing (e.g. web servers)
 * **Private**: Internal-only (e.g. databases)
 
-### Network ACLs
+### 🚧 Network ACLs
 
 * Stateless firewall at subnet level
 * Checks inbound and outbound rules independently
 
-### Security Groups
+### 🛡️ Security Groups
 
 * Stateful firewall at EC2 instance level
 * Remembers previous requests
@@ -273,11 +273,11 @@ Factors to consider:
 
 ## 🌐 Global Networking
 
-### Domain Name System (DNS)
+### 🌐 Domain Name System (DNS)
 
 * Translates domain names to IPs (like a phonebook)
 
-### Amazon Route 53
+### 🚦 Amazon Route 53
 
 * DNS and domain registration service
 * Integrates with CloudFront for CDN
