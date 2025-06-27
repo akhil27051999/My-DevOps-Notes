@@ -45,9 +45,9 @@ A **client** is an application (like a browser or desktop app) that sends reques
 * Hybrid deployments provide a bridge between legacy systems and cloud-native applications.
 
 
-# ⚙️ Module 2: Amazon EC2
+# 🖥️ Module 2: Amazon EC2
 
-## 🖥️ Amazon EC2?
+### Amazon EC2?
 
 Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering secure and resizable compute capacity.
 
