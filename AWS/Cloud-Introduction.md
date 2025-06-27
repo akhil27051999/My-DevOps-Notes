@@ -1,16 +1,9 @@
-# ☁️ AWS: Practical Examples
 
-This README contains a curated set of beginner-to-intermediate AWS tasks and concepts to help you learn AWS infrastructure and services with real-world analogies.
-
----
-
-## 🌐 Module 1: Introduction to Cloud
+# 🌐 Module 1: Introduction to Cloud
 
 ### 🤝 What is a Client-Server Model?
 
 A **client** is an application (like a browser or desktop app) that sends requests, and a **server** (like an Amazon EC2 instance) responds to those requests. This architecture is the foundation of modern web computing.
-
----
 
 ## ☁️ Cloud Deployment Models
 
@@ -37,9 +30,7 @@ A **client** is an application (like a browser or desktop app) that sends reques
 
 **Example**: Use AWS Glue and Athena for big data while keeping ERP on-prem.
 
----
-
-## ✅ Summary Table
+### ✅ Summary Table
 
 | Deployment Model | Location | Use Case Example                    | Benefits                    |
 | ---------------- | -------- | ----------------------------------- | --------------------------- |
@@ -47,9 +38,7 @@ A **client** is an application (like a browser or desktop app) that sends reques
 | On-Premises      | Local DC | Compliance-heavy legacy systems     | Full control, data locality |
 | Hybrid           | Mixed    | Gradual migration, hybrid analytics | Flexibility, balance        |
 
----
-
-## 🧠 Key Takeaways
+### 🧠 Key Takeaways
 
 * Cloud computing offers multiple deployment models tailored to business and technical needs.
 * The **client-server model** is central to how services interact over the internet.
@@ -57,9 +46,9 @@ A **client** is an application (like a browser or desktop app) that sends reques
 
 ---
 
-## ⚙️ Module 2: Amazon EC2
+# ⚙️ Module 2: Amazon EC2
 
-### 💜 What is Amazon EC2?
+## 💜 What is Amazon EC2?
 
 Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering secure and resizable compute capacity.
 
@@ -101,9 +90,8 @@ Optimized for large sequential I/O.
 
 * Use cases: data warehousing, OLTP
 
----
 
-### 💰 EC2 Pricing Options
+## 💰 EC2 Pricing Options
 
 #### On-Demand
 
@@ -130,9 +118,8 @@ Optimized for large sequential I/O.
 * Physical servers dedicated to your use
 * Best for license compliance, expensive
 
----
 
-### 📈 Scaling with EC2 Auto Scaling
+## 📈 Scaling with EC2 Auto Scaling
 
 **Scalability:** Add/remove EC2 instances automatically.
 
@@ -144,9 +131,8 @@ Optimized for large sequential I/O.
 * Dynamic Scaling: Responds to real-time demand
 * Predictive Scaling: Anticipates future demand
 
----
 
-### 🔄 Load Balancing with Elastic Load Balancer
+## 🔄 Load Balancing with Elastic Load Balancer
 
 **Elastic Load Balancer (ELB):**
 Distributes incoming traffic across EC2 instances.
@@ -159,9 +145,8 @@ Distributes incoming traffic across EC2 instances.
 * Registers = EC2 Instances
 * Barista = Load Balancer
 
----
 
-### 📬 Messaging and Queuing
+## 📬 Messaging and Queuing
 
 #### Monolithic vs Microservices
 
@@ -178,9 +163,8 @@ Distributes incoming traffic across EC2 instances.
 * Message queue
 * Decouples services and improves reliability
 
----
 
-### 🧹 Additional Compute Services
+## 🧹 Additional Compute Services
 
 #### AWS Lambda
 
@@ -196,9 +180,9 @@ Distributes incoming traffic across EC2 instances.
 
 ---
 
-## 🌐 Module 3: Global Infrastructure & Reliability
+# 🌐 Module 3: Global Infrastructure & Reliability
 
-### 🔠 AWS Global Infrastructure
+## 🔠 AWS Global Infrastructure
 
 #### 🌍 Selecting a Region
 
@@ -209,45 +193,44 @@ Factors to consider:
 * **Available Services**: Some services are region-specific
 * **Pricing**: Prices vary by region (e.g. US vs Brazil)
 
-#### 🚧 Availability Zones (AZs)
+### 🚧 Availability Zones (AZs)
 
 * One or more data centers in a Region
 * Low-latency but physically separate
 * Ensures fault tolerance and disaster recovery
 
-#### 🌐 Edge Locations
+### 🌐 Edge Locations
 
 * Content cached close to users via Amazon CloudFront
 
 ---
 
-### 🔧 Management Interfaces
+## 🔧 Management Interfaces
 
-#### AWS Management Console
+### AWS Management Console
 
 * Web UI to manage AWS services
 * Includes wizards, automation, and mobile app
 
-#### AWS CLI
+### AWS CLI
 
 * Command-line access to AWS APIs
 * Supports automation and scripting
 
-#### SDKs
+### SDKs
 
 * Access AWS via programming languages (Java, Python, .NET, etc)
 * Build apps that integrate directly with AWS
 
----
 
-### 🏠 Infrastructure as Code Tools
+## 🏠 Infrastructure as Code Tools
 
-#### AWS Elastic Beanstalk
+### AWS Elastic Beanstalk
 
 * Deploy apps using code/configs
 * Supports: load balancing, auto scaling, health monitoring
 
-#### AWS CloudFormation
+### AWS CloudFormation
 
 * Treat infrastructure as code
 * Safely and repeatedly deploy stacks
@@ -255,51 +238,48 @@ Factors to consider:
 
 ---
 
-## 🌐 Module 4: Networking
+# 🌐 Module 4: Networking
 
-### 🔗 Amazon VPC (Virtual Private Cloud)
+## 🔗 Amazon VPC (Virtual Private Cloud)
 
 * Isolated section of AWS Cloud to launch resources
 * Group resources using subnets (public/private)
 
-### 🌍 Internet Gateway & VPN Gateway
+## 🌍 Internet Gateway & VPN Gateway
 
 * **Internet Gateway**: Enables public access to VPC
 * **Virtual Private Gateway**: Connects VPC to on-prem via VPN
 
-### 🚪 AWS Direct Connect
+## 🚪 AWS Direct Connect
 
 * Private dedicated connection to AWS
 * Bypasses public internet, increases reliability and bandwidth
 
----
+## 📦 Subnets and Network Access Control
 
-### 📦 Subnets and Network Access Control
-
-#### Subnets
+### Subnets
 
 * **Public**: Internet-facing (e.g. web servers)
 * **Private**: Internal-only (e.g. databases)
 
-#### Network ACLs
+### Network ACLs
 
 * Stateless firewall at subnet level
 * Checks inbound and outbound rules independently
 
-#### Security Groups
+### Security Groups
 
 * Stateful firewall at EC2 instance level
 * Remembers previous requests
 
----
 
-### 🌐 Global Networking
+## 🌐 Global Networking
 
-#### Domain Name System (DNS)
+### Domain Name System (DNS)
 
 * Translates domain names to IPs (like a phonebook)
 
-#### Amazon Route 53
+### Amazon Route 53
 
 * DNS and domain registration service
 * Integrates with CloudFront for CDN
@@ -307,14 +287,14 @@ Factors to consider:
 
 ---
 
-## 📊 Module 5: Storage and Database
+# 📊 Module 5: Storage and Database
 
-### 📂 Instance Stores
+## 📂 Instance Stores
 
 Block-level storage volumes behave like physical hard drives.
 An instance store provides temporary block-level storage for an Amazon EC2 instance. An instance store is disk storage that is physically attached to the host computer for an EC2 instance, and therefore has the same lifespan as the instance. When the instance is terminated, you lose any data in the instance store.
 
-### 📀 Amazon Elastic Block Store (Amazon EBS)
+## 📀 Amazon Elastic Block Store (Amazon EBS)
 
 Amazon Elastic Block Store (Amazon EBS) is a service that provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available.
 
@@ -324,7 +304,7 @@ To create an EBS volume, you define the configuration (such as volume size and t
 
 * An EBS snapshot is an incremental backup. This means that the first backup taken of a volume copies all the data. For subsequent backups, only the blocks of data that have changed since the most recent snapshot are saved.
 
-### 📁 Object Storage
+## 📁 Object Storage
 
 In object storage, each object consists of:
 
@@ -332,7 +312,7 @@ In object storage, each object consists of:
 * **Metadata**: Info about the data (type, size, usage)
 * **Key**: Unique identifier
 
-### 📀 Amazon S3 (Simple Storage Service)
+## 📀 Amazon S3 (Simple Storage Service)
 
 Amazon S3 stores data as **objects in buckets** and offers:
 
@@ -357,13 +337,13 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * **S3 Glacier Deep Archive**: Archive, 12-48 hours
 * **S3 Outposts**: Object storage on AWS Outposts (on-prem)
 
-### 📂 Amazon EFS (Elastic File System)
+## 📂 Amazon EFS (Elastic File System)
 
 * File storage solution for EC2 and on-prem
 * Automatically scales up/down
 * Use case: Multiple servers accessing shared files
 
-### 📊 Amazon RDS (Relational Database Service)
+## 📊 Amazon RDS (Relational Database Service)
 
 * Managed relational DB service
 * Automates: backups, patching, provisioning
@@ -385,24 +365,24 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * 5x faster than MySQL
 * Replicates across 3 AZs
 
-### 🔀 Amazon DynamoDB (Nonrelational)
+## 🔀 Amazon DynamoDB (Nonrelational)
 
 * Key-value database
 * Fast at any scale
 * Ideal for applications with flexible schemas
 
-### 📊 Amazon Redshift
+## 📊 Amazon Redshift
 
 * Data warehouse service
 * Analyzes big data from multiple sources
 
-### ⏫ AWS Database Migration Service (AWS DMS)
+## ⏫ AWS Database Migration Service (AWS DMS)
 
 * Migrate relational and nonrelational DBs
 * Source DB stays online during migration
 * Supports heterogeneous migrations
 
-### 🔎 Additional DB Services
+## 🔎 Additional DB Services
 
 * **Amazon DocumentDB**: Document DB for MongoDB
 * **Amazon Neptune**: Graph DB for connected datasets
@@ -413,10 +393,9 @@ Amazon S3 stores data as **objects in buckets** and offers:
 
 ---
 
+# ✅ Module 6: 🔐 Security
 
-## ✅ Module 6: 🔐 Security
-
-#### 1. 🛡️ Shared responsibility model
+## 1. 🛡️ Shared responsibility model
 
 **The AWS shared responsibility model**
 
@@ -427,7 +406,7 @@ AWS and the customer share responsibility for security and compliance.
 
 **🏠 Analogy**: AWS builds the house (cloud infrastructure), and the customer locks the doors and windows (data, apps, access control).
 
-#### 2. 👥 IAM: Users, Policies, Roles, MFA
+## 2. 👥 IAM: Users, Policies, Roles, MFA
 
 **AWS Identity and Access Management (IAM)** provides:
 
@@ -445,7 +424,7 @@ AWS and the customer share responsibility for security and compliance.
 * Use IAM roles over long-lived credentials
 * Enforce MFA for critical users
 
-#### 3. 🏢 AWS Organizations
+## 3. 🏢 AWS Organizations
 
 **AWS Organizations** allows centralized management of multiple accounts:
 
@@ -453,12 +432,12 @@ AWS and the customer share responsibility for security and compliance.
 * **🛑 Service Control Policies (SCPs)** – set permission guardrails for accounts
 * Use **💳 consolidated billing** and apply compliance controls via SCPs
 
-#### 4. 📋 Compliance
+## 4. 📋 Compliance
 
 * **📄 AWS Artifact** – access AWS compliance reports and agreements
 * **🔍 Customer Compliance Center** – whitepapers, audit guides, learning path for auditors
 
-#### 5. 🚫 Denial-of-Service (DoS/DDoS) Attacks
+## 5. 🚫 Denial-of-Service (DoS/DDoS) Attacks
 
 **DoS** = one source overwhelms app/network.
 **DDoS** = multiple sources or bots flood app/network.
@@ -468,25 +447,25 @@ AWS and the customer share responsibility for security and compliance.
 * **AWS Shield Standard** – free, automatic mitigation for common attacks
 * **AWS Shield Advanced** – paid, advanced detection & support, integrates with CloudFront, WAF, Route 53, ELB
 
-#### 6. 🔑 AWS KMS (Key Management Service)
+## 6. 🔑 AWS KMS (Key Management Service)
 
 * Create/manage encryption keys
 * Perform encryption in transit and at rest
 * Control access to keys via IAM policies
 
-#### 7. 🌐 AWS WAF (Web Application Firewall)
+## 7. 🌐 AWS WAF (Web Application Firewall)
 
 * Protects applications from malicious traffic
 * Use **Web ACLs** to allow/deny requests based on IPs, patterns, headers, etc.
 * Integrates with CloudFront and ALB
 
-#### 8. 🔍 Amazon Inspector
+## 8. 🔍 Amazon Inspector
 
 * Automated security assessment tool
 * Identifies vulnerabilities like exposed ports or outdated packages
 * Generates prioritized findings with remediation suggestions
 
-#### 9. 🧠 Amazon GuardDuty
+## 9. 🧠 Amazon GuardDuty
 
 * Intelligent threat detection for AWS accounts
 * Analyzes VPC Flow Logs, DNS logs, CloudTrail events
@@ -495,9 +474,9 @@ AWS and the customer share responsibility for security and compliance.
 
 ---
 
-## 📊 Module 7: Monitoring
+# 📊 Module 7: Monitoring
 
-### 🌐 Amazon CloudWatch
+## 🌐 Amazon CloudWatch
 
 * Monitors AWS services and custom app metrics
 * Visualize performance over time via graphs
@@ -512,7 +491,7 @@ AWS and the customer share responsibility for security and compliance.
 * Unified view for metrics from different resources (EC2, S3, etc.)
 * Customizable per team, app, or purpose
 
-### 📊 AWS CloudTrail
+## 📊 AWS CloudTrail
 
 * Records API activity across your account
 * Tracks user identity, timestamp, source IP, and event details
@@ -522,7 +501,7 @@ AWS and the customer share responsibility for security and compliance.
 * Detects unusual API behavior (e.g., spike in EC2 launches)
 * Provides deeper context for anomalies
 
-### 🧰 AWS Trusted Advisor
+## 🧰 AWS Trusted Advisor
 
 * Offers real-time recommendations based on best practices
 * Categories: Cost, Performance, Security, Fault Tolerance, Service Limits
@@ -534,48 +513,48 @@ AWS and the customer share responsibility for security and compliance.
 * ❌ Red: Action required
 
 
-## 💲 Module 8: Pricing and Support
+# 💲 Module 8: Pricing and Support
 
-### 📦 AWS Free Tier
+## 📦 AWS Free Tier
 
 * Always Free, 12 Months Free, and Trials
 * Review specific resource limits to avoid unexpected charges
 
-### 📈 AWS Pricing Concepts
+## 📈 AWS Pricing Concepts
 
 * **Pay-as-you-go**: Pay only for what you use
 * **Reserved pricing**: Discount for long-term usage (e.g. EC2 Savings Plans)
 * **Volume discounts**: Per-unit cost decreases with higher usage (e.g. S3 storage)
 
-### 📊 AWS Pricing Calculator
+## 📊 AWS Pricing Calculator
 
 * Estimate AWS costs by service, resource type, and region
 * Compare options (e.g. EC2 instance types) before deployment
 
-### 💳 Billing Dashboard
+## 💳 Billing Dashboard
 
 * Monitor usage and costs
 * Compare current and past bills
 * Access Cost Explorer, budgets, and reports
 
-### 📆 Consolidated Billing
+## 📆 Consolidated Billing
 
 * Single bill across accounts in AWS Organizations
 * Share discounts (e.g. Reserved Instances, Savings Plans)
 * Helps with visibility and cost optimization
 
-### 💸 AWS Budgets
+## 💸 AWS Budgets
 
 * Set usage or cost limits
 * Receive alerts when nearing or exceeding thresholds
 * Example: Alert when EC2 usage exceeds \$100
 
-### 📉 AWS Cost Explorer
+## 📉 AWS Cost Explorer
 
 * Visualize usage and spending patterns
 * Analyze by service, time, region, and more
 
-### 🔧 AWS Support Plans
+## 🔧 AWS Support Plans
 
 * **Basic**: Free, access to documentation and limited Trusted Advisor
 * **Developer**: Best practice guidance and diagnostic tools
@@ -583,21 +562,21 @@ AWS and the customer share responsibility for security and compliance.
 * **Enterprise On-Ramp**: TAM pool, faster response times
 * **Enterprise**: Dedicated TAM, concierge support, architecture reviews
 
-### 🔝 Technical Account Manager (TAM)
+## 🔝 Technical Account Manager (TAM)
 
 * Helps guide large-scale architecture decisions
 * Provides AWS expertise, cost optimization, and performance tuning
 
-### 🌐 AWS Marketplace
+## 🌐 AWS Marketplace
 
 * Discover, test, and deploy 3rd-party solutions
 * Organized by use case (e.g. DevOps, ML, Healthcare)
 * Includes pricing, reviews, and support details
 
 
-## ✅ Module 9: 🚚 Migration and Innovation
+# 🚚 Module 9:  Migration and Innovation
 
-#### 🌐 AWS Cloud Adoption Framework (AWS CAF)
+## 🌐 AWS Cloud Adoption Framework (AWS CAF)
 
 Six perspectives:
 
@@ -625,7 +604,7 @@ Six perspectives:
 
   * Roles: IT ops managers, IT support managers
 
-#### 🚀 Migration Strategies – The 6 R’s
+## 🚀 Migration Strategies – The 6 R’s
 
 1. **🔄 Rehosting** – lift and shift
 2. **🔧 Re-platforming** – minor tweaks for cloud optimizations
@@ -634,7 +613,7 @@ Six perspectives:
 5. **📦 Retaining** – keep in current environment
 6. **🗑️ Retiring** – remove obsolete apps
 
-#### 📦 AWS Snow Family
+## 📦 AWS Snow Family
 
 * **🧊 Snowcone** – small edge device (2 CPUs, 4GB RAM, 8TB storage)
 
@@ -645,7 +624,7 @@ Six perspectives:
 
 * **🚛 Snowmobile** – 45-foot truck, up to 100PB per unit
 
-#### 💡 Innovate with AWS
+## 💡 Innovate with AWS
 
 * **Desired outcomes**: Know current state, desired state, problem to solve
 
@@ -663,9 +642,9 @@ Six perspectives:
   * Predict outcomes, analyze data, solve complex problems
 
 
-## ✅ Module 10: 🧭 The Cloud Journey
+# 🧭 Module 10:  The Cloud Journey
 
-#### 🏛️ AWS Well-Architected Framework
+## 🏛️ AWS Well-Architected Framework
 
 Helps us design and operate reliable, secure, efficient, and cost-effective systems:
 
@@ -676,7 +655,7 @@ Helps us design and operate reliable, secure, efficient, and cost-effective syst
 5. **💸 Cost Optimization** – Deliver value at the lowest cost
 6. **🌱 Sustainability** – Reduce energy consumption and improve resource efficiency
 
-#### ☁️ Benefits of the AWS Cloud
+## ☁️ Benefits of the AWS Cloud
 
 Six key advantages:
 
@@ -687,37 +666,37 @@ Six key advantages:
 5. Eliminate data center maintenance
 6. Go global in minutes
 
-#### 📊 AWS Config
+## 📊 AWS Config
 
 * Provides historical and real-time view of AWS resource configuration
 * Track configuration changes over time
 
-#### 🔐 Amazon Cognito
+## 🔐 Amazon Cognito
 
 * User authentication, authorization, and management
 * Supports direct login or federated identity (Google, Facebook, Apple)
 * **User pools** for sign-up/sign-in, **Identity pools** for AWS access
 
-#### 🏛️ AWS Organizations
+## 🏛️ AWS Organizations
 
 * Manage and consolidate multiple AWS accounts
 * Centralized billing and policy enforcement
 
-#### 💡 Amazon LightSail
+## 💡 Amazon LightSail
 
 * Simplified server deployment with automatic networking and security setup
 
-#### 🧮 AWS Batch
+## 🧮 AWS Batch
 
 * Run batch computing jobs without managing infrastructure
 * Automatically provisions compute as needed
 
-#### 🧾 AWS CloudTrail Logs
+## 🧾 AWS CloudTrail Logs
 
 * Track AWS API activity across accounts
 * Delivers logs to S3 or CloudTrail Lake
 
-#### 💻 AWS Code Tools
+## 💻 AWS Code Tools
 
 * **CodeStar** – unified UI for software dev lifecycle
 * **CodeCommit** – managed Git source control
@@ -725,52 +704,52 @@ Six key advantages:
 * **CodePipeline** – CI/CD automation for builds & releases
 * **CodeGuru** – reviews code and finds expensive lines or bugs
 
-#### 🗃️ Amazon FSx
+### 🗃️ Amazon FSx
 
 * Fully managed Microsoft Windows file servers
 * Supports Windows-native apps and features
 
-#### 🛢️ Amazon Aurora
+### 🛢️ Amazon Aurora
 
 * Highly available, scalable relational DB with serverless and cross-region support
 
-#### 🔑 AWS KMS
+### 🔑 AWS KMS
 
 * Key management for data encryption
 
-#### 📥 Amazon Kinesis
+### 📥 Amazon Kinesis
 
 * Real-time data stream ingestion and analytics
 
-#### 🔍 Amazon Athena
+### 🔍 Amazon Athena
 
 * Serverless SQL queries directly on S3
 
-#### 🌍 Amazon CloudFront
+### 🌍 Amazon CloudFront
 
 * Global content delivery network (CDN) for faster access to web content
 
-#### 📚 AWS Knowledge Center
+### 📚 AWS Knowledge Center
 
 * FAQs, tutorials, and best practices
 
-#### 🆘 AWS Support Center
+### 🆘 AWS Support Center
 
 * Access to technical experts and case tracking
 
-#### 🕵️ Amazon Macie
+### 🕵️ Amazon Macie
 
 * ML-powered sensitive data discovery and protection
 
-#### 📊 Amazon QuickSight
+### 📊 Amazon QuickSight
 
 * BI and dashboarding for interactive analytics and reporting
 
-#### 🏗️ AWS CloudFormation
+### 🏗️ AWS CloudFormation
 
 * Infrastructure as code service to provision/manage resources consistently
 
-#### 📜 AWS Certificate Manager
+### 📜 AWS Certificate Manager
 
 * Easily manage SSL/TLS certs for secure connections
 
