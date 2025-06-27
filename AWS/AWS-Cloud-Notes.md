@@ -354,24 +354,24 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * 5x faster than MySQL
 * Replicates across 3 AZs
 
-### 🔀 Amazon DynamoDB (Nonrelational)
+## 🔀 Amazon DynamoDB (Nonrelational)
 
 * Key-value database
 * Fast at any scale
 * Ideal for applications with flexible schemas
 
-### 📊 Amazon Redshift
+## 📊 Amazon Redshift
 
 * Data warehouse service
 * Analyzes big data from multiple sources
 
-### ⏫ AWS Database Migration Service (AWS DMS)
+## ⏫ AWS Database Migration Service (AWS DMS)
 
 * Migrate relational and nonrelational DBs
 * Source DB stays online during migration
 * Supports heterogeneous migrations
 
-### 🔎 Additional DB Services
+## 🔎 Additional DB Services
 
 * **Amazon DocumentDB**: Document DB for MongoDB
 * **Amazon Neptune**: Graph DB for connected datasets
