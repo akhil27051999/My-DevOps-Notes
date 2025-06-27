@@ -1,9 +1,5 @@
 # 🛠️ DevOps Shell Script Readme: 30 Practical Monitoring & Maintenance Scripts
 
-This README documents 30 essential shell scripts useful in day-to-day system administration, DevOps automation, and observability tasks. Each script includes purpose, code, and explanation to help you understand and customize them.
-
----
-
 ## 📁 Script Index
 
 1. Disk usage alert
