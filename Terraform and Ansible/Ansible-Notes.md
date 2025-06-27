@@ -99,9 +99,8 @@ handlers:
       state: restarted
 ```
 
----
 
-## 🛠️ Ansible Troubleshooting Scenarios
+# 🛠️ Ansible Troubleshooting Scenarios
 
 ### 1. **SSH Connectivity Issues**
 
@@ -195,4 +194,3 @@ handlers:
 * Use `check` and `diff` mode for dry-runs.
 * Centralize inventory with dynamic inventory scripts or plugins.
 
-Let me know if you want a real-world project example using Ansible + AWS EC2 setup or CI/CD integration.
