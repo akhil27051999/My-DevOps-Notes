@@ -1,9 +1,5 @@
 # 🚨 Terraform Troubleshooting and Recovery Guide
 
-This guide outlines common Terraform issues, their root causes, and step-by-step resolutions. Designed for real-world operations and interview readiness.
-
----
-
 ## 🔧 1. Terraform State Corruption
 
 * **Restore from Backup**: Use S3 versioning or local `.tfstate.backup`.
@@ -192,7 +188,3 @@ This guide outlines common Terraform issues, their root causes, and step-by-step
 * **Pin Versions**: In `terraform` block
 * **Test in Staging**
 * **Check upgrade notes**
-
----
-
-> 💡 **Pro Tip**: Always version-control your `.tf` files, lock provider versions, and use `terraform plan` before every apply.
