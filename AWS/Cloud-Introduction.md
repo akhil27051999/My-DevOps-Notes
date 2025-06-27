@@ -428,14 +428,14 @@ AWS and the customer share responsibility for security and compliance.
 
 **AWS Organizations** allows centralized management of multiple accounts:
 
-* **📂 Organizational Units (OUs)** – group accounts based on structure/policy
-* **🛑 Service Control Policies (SCPs)** – set permission guardrails for accounts
-* Use **💳 consolidated billing** and apply compliance controls via SCPs
+* **Organizational Units (OUs)** – group accounts based on structure/policy
+* **Service Control Policies (SCPs)** – set permission guardrails for accounts
+* Use **consolidated billing** and apply compliance controls via SCPs
 
 ## 4. 📋 Compliance
 
-* **📄 AWS Artifact** – access AWS compliance reports and agreements
-* **🔍 Customer Compliance Center** – whitepapers, audit guides, learning path for auditors
+* **WS Artifact** – access AWS compliance reports and agreements
+* **Customer Compliance Center** – whitepapers, audit guides, learning path for auditors
 
 ## 5. 🚫 Denial-of-Service (DoS/DDoS) Attacks
 
