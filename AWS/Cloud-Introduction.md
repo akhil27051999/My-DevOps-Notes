@@ -635,8 +635,7 @@ Six perspectives:
 * **Desired outcomes**: Know current state, desired state, problem to solve
 
 ### ☁️ Serverless
-   
-   – no provisioning, automatic scaling, fault tolerance
+  * no provisioning, automatic scaling, fault tolerance
 
 ### 🧠 Artificial Intelligence – Services
 
