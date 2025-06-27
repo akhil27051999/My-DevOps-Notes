@@ -59,31 +59,31 @@ Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering se
 
 ## 💡 EC2 Instance Types
 
-#### General Purpose
+#### ⚖️ General Purpose
 
 Balanced compute, memory, and networking.
 
 * Use cases: app servers, small DBs, game servers
 
-#### Compute Optimized
+#### 💪 Compute Optimized
 
 High-performance processors.
 
 * Use cases: high-performance web servers, batch processing
 
-#### Memory Optimized
+#### 🧠 Memory Optimized
 
 Designed for in-memory workloads.
 
 * Use cases: real-time analytics, large databases
 
-#### Accelerated Computing
+#### 🚀 Accelerated Computing
 
 Uses hardware accelerators (GPUs, FPGAs).
 
 * Use cases: ML, graphics, pattern matching
 
-#### Storage Optimized
+#### 🗄️ Storage Optimized
 
 Optimized for large sequential I/O.
 
@@ -92,27 +92,27 @@ Optimized for large sequential I/O.
 
 ## 💰 EC2 Pricing Options
 
-#### On-Demand
+#### 💵 On-Demand
 
 * Pay per hour/second
 * Best for short-term, unpredictable workloads
 
-#### Savings Plans
+#### 💸 Savings Plans
 
 * Commit to 1–3 years
 * Save up to 72%
 
-#### Reserved Instances
+#### 📆 Reserved Instances
 
 * 1- or 3-year terms
 * Ideal for steady-state usage
 
-#### Spot Instances
+#### 🎯 Spot Instances
 
 * Use unused capacity
 * Up to 90% discount, may be interrupted
 
-#### Dedicated Hosts
+#### 🖥️ Dedicated Hosts
 
 * Physical servers dedicated to your use
 * Best for license compliance, expensive
@@ -131,7 +131,7 @@ Optimized for large sequential I/O.
 * Predictive Scaling: Anticipates future demand
 
 
-## 🔄 Load Balancing with Elastic Load Balancer
+## ⚖️ Load Balancing with Elastic Load Balancer
 
 **Elastic Load Balancer (ELB):**
 Distributes incoming traffic across EC2 instances.
@@ -147,17 +147,17 @@ Distributes incoming traffic across EC2 instances.
 
 ## 📬 Messaging and Queuing
 
-#### Monolithic vs Microservices
+#### 🏗️ Monolithic vs Microservices
 
 * Monolithic: Tightly coupled, one failure can bring down the app
 * Microservices: Loosely coupled, resilient
 
-#### Amazon SNS (Notification Service)
+#### 📣 Amazon SNS (Notification Service)
 
 * Pub/Sub model
 * Send notifications to email, Lambda, etc.
 
-#### Amazon SQS (Queue Service)
+#### 📨 Amazon SQS (Queue Service)
 
 * Message queue
 * Decouples services and improves reliability
@@ -165,13 +165,13 @@ Distributes incoming traffic across EC2 instances.
 
 ## 🧹 Additional Compute Services
 
-#### AWS Lambda
+#### 🪄 AWS Lambda
 
 * Run code without managing servers
 * Triggered by events (e.g. image upload)
 * Pay only when code runs
 
-#### Containers & Orchestration
+#### 🐳 Containers & Orchestration
 
 * **Amazon ECS**: Docker container orchestration
 * **Amazon EKS**: Managed Kubernetes service
