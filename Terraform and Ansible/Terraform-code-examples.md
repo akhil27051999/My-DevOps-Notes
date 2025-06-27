@@ -32,7 +32,6 @@ output "instance_public_ip" {
 }
 ```
 
----
 
 ## 2. 🌐 VPC and Subnets
 
@@ -67,7 +66,6 @@ output "vpc_id" {
 }
 ```
 
----
 
 ## 3. 🪣 S3 Bucket
 
@@ -93,7 +91,6 @@ output "bucket_name" {
 }
 ```
 
----
 
 ## 4. 🔐 Security Group
 
@@ -130,7 +127,6 @@ output "security_group_id" {
 }
 ```
 
----
 
 ## 5. 📦 Module Usage
 
@@ -172,7 +168,6 @@ output "instance_public_ip" {
 }
 ```
 
----
 
 ## 6. 🗃️ Remote State Backend
 
@@ -195,8 +190,6 @@ terraform {
   }
 }
 ```
-
----
 
 ## 7. 🔐 IAM Role & Policy
 
@@ -241,7 +234,6 @@ resource "aws_iam_role_policy_attachment" "ec2_s3_policy" {
 }
 ```
 
----
 
 ## 8. 🧪 RDS Instance
 
@@ -268,7 +260,6 @@ output "db_endpoint" {
 }
 ```
 
----
 
 ## 9. 📈 Auto Scaling Group
 
@@ -296,7 +287,6 @@ resource "aws_autoscaling_group" "example" {
 }
 ```
 
----
 
 ## 10. ⚖️ Application Load Balancer (ALB)
 
@@ -336,7 +326,6 @@ resource "aws_lb_listener" "example" {
 }
 ```
 
----
 
 ## ✅ Summary: Key Concepts
 
