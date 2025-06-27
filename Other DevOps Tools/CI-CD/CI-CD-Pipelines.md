@@ -333,15 +333,467 @@ jobs:
             kubectl apply -f k8s/production-deployment.yaml
 ```
 
+## 11. Automated Testing and Quality Checks
+
+### 🌟 Objective
+
+Automate unit, integration, and E2E testing and ensure code quality before deploying to production.
+
+### 🚀 Pipeline Steps
+
+* **Checkout Code**: Pull latest changes.
+* **Run Tests**: Use frameworks like Jest, JUnit, or Selenium.
+* **Code Quality**: Run static analysis (e.g., SonarQube, ESLint).
+* **Deploy**: Only if all checks pass.
+
+### GitHub Actions Example
+
+```yaml
+name: Test and Quality Checks
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test_and_quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Unit Tests
+        run: npm test
+
+      - name: Run SonarQube Quality Check
+        run: sonar-scanner
+
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl apply -f k8s/deployment.yaml
+```
+
+### 🔑 Key Concepts
+
+* **Testing**: Automated validation of code correctness.
+* **Quality Gate**: Prevent bad code from reaching production.
+
 ---
 
-> 🔐 **Key Concepts Covered:**
+## 12. Database Migration and Rollback
 
-* CI/CD Pipelines with Docker, Kubernetes, Jenkins, GitHub Actions
-* Serverless & GitOps Deployments
-* Infrastructure as Code with Terraform
-* Multistage Docker Builds
-* Security, Compliance, and Rollback Strategies
-* Canary & Blue-Green Deployments
+### 🌟 Objective
 
-Let me know if you want all examples in separate files or explained as part of a specific stack!
+Automate DB schema changes and enable rollback mechanisms.
+
+### 🚀 Pipeline Steps
+
+* **Run Migrations**: Use tools like Liquibase or Flyway.
+* **Deploy App**: Proceed only if migration succeeds.
+* **Rollback**: Revert DB and app if failure occurs.
+
+### Jenkinsfile Example
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Database Migration') {
+            steps {
+                script {
+                    sh "liquibase update"
+                }
+            }
+        }
+        stage('Deploy Application') {
+            steps {
+                script {
+                    sh "kubectl apply -f k8s/deployment.yaml"
+                }
+            }
+        }
+        stage('Rollback') {
+            when {
+                failure()
+            }
+            steps {
+                script {
+                    sh "liquibase rollbackCount 1"
+                    sh "kubectl rollout undo deployment/myapp"
+                }
+            }
+        }
+    }
+}
+```
+
+### 🔑 Key Concepts
+
+* **Database CI/CD**: Version-controlled schema management.
+* **Resilience**: Safe fallback during failures.
+
+---
+
+## 13. CI/CD with Docker Compose
+
+### 🌟 Objective
+
+Build, test, and deploy multi-container apps with Docker Compose.
+
+### 🚀 Pipeline Steps
+
+* **Build Images**: For services defined in `docker-compose.yml`.
+* **Run Tests**: Inside isolated containers.
+* **Deploy**: Use Compose or Kubernetes.
+
+### GitHub Actions Example
+
+```yaml
+name: CI/CD with Docker Compose
+on:
+  push:
+    branches:
+      - main
+jobs:
+  docker_compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Docker Compose
+        run: sudo apt-get install docker-compose
+
+      - name: Build Docker Images
+        run: docker-compose build
+
+      - name: Run Tests
+        run: docker-compose run test
+
+      - name: Deploy with Docker Compose
+        run: docker-compose up -d
+```
+
+### 🔑 Key Concepts
+
+* **Service Isolation**: Run and test services independently.
+* **Multi-container orchestration**: Quick local testing environment.
+
+---
+
+## 14. Blue-Green Deployment Strategy
+
+### 🌟 Objective
+
+Deploy with near-zero downtime by toggling between environments.
+
+### 🚀 Pipeline Steps
+
+* **Deploy to Green**: Deploy new version.
+* **Test Green**: Run health and performance checks.
+* **Switch Traffic**: Move traffic from Blue to Green.
+* **Rollback**: Revert to Blue if needed.
+
+### Jenkinsfile Example
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Deploy to Green') {
+            steps {
+                script {
+                    sh "kubectl apply -f k8s/green-deployment.yaml"
+                }
+            }
+        }
+        stage('Test Green') {
+            steps {
+                script {
+                    sh "curl -f http://green-environment/myapp/healthcheck"
+                }
+            }
+        }
+        stage('Switch Traffic to Green') {
+            steps {
+                script {
+                    sh "kubectl expose deployment green --name=myapp --port=80 --type=LoadBalancer"
+                }
+            }
+        }
+        stage('Rollback') {
+            when {
+                failure()
+            }
+            steps {
+                script {
+                    sh "kubectl expose deployment blue --name=myapp --port=80 --type=LoadBalancer"
+                }
+            }
+        }
+    }
+}
+```
+
+### 🔑 Key Concepts
+
+* **Zero Downtime**: User experience remains uninterrupted.
+* **Safer Releases**: Easier rollback path.
+
+---
+
+## 15. Serverless Continuous Deployment
+
+### 🌟 Objective
+
+Automate deployments for serverless apps like AWS Lambda.
+
+### 🚀 Pipeline Steps
+
+* **Build Function**: Prepare serverless app code.
+* **Deploy**: Use platform CLIs (e.g., AWS CLI).
+* **Test**: Confirm deployment with test invocations.
+
+### GitHub Actions Example
+
+```yaml
+name: Serverless CI/CD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up AWS CLI
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set region ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to Lambda
+        run: |
+          aws lambda update-function-code --function-name my-function --zip-file fileb://function.zip
+```
+
+### 🔑 Key Concepts
+
+* **Serverless CI/CD**: Deploy without provisioning infrastructure.
+* **Cloud-native**: Lightweight and scalable deployment models.
+
+---
+
+## 16. Canary Deployment Strategy
+
+### 🌟 Objective
+
+Gradually release a new version of the application to a small subset of users before full deployment.
+
+### 🚀 Pipeline Steps
+
+* **Deploy Canary Version**: Roll out the new version to a limited user base.
+* **Monitor Canary Deployment**: Check health status and app performance.
+* **Full Deployment**: Promote the new version if everything works fine.
+* **Rollback**: Revert changes if issues are detected.
+
+###  Jenkinsfile Example
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Deploy Canary') {
+            steps {
+                script {
+                    sh "kubectl apply -f k8s/canary-deployment.yaml"
+                }
+            }
+        }
+        stage('Monitor Canary') {
+            steps {
+                script {
+                    sh "kubectl rollout status deployment/myapp-canary"
+                }
+            }
+        }
+        stage('Full Deployment') {
+            steps {
+                script {
+                    sh "kubectl apply -f k8s/full-deployment.yaml"
+                }
+            }
+        }
+        stage('Rollback') {
+            when {
+                failure()
+            }
+            steps {
+                script {
+                    sh "kubectl rollout undo deployment/myapp"
+                }
+            }
+        }
+    }
+}
+```
+
+### 🔑 Key Concepts
+
+* **Canary Deployment**: Release new features incrementally.
+* **Monitoring**: Validate performance before full rollout.
+
+---
+
+## 17. Multi-Repository Microservices Pipeline
+
+### 🌟 Objective
+
+CI/CD pipeline for multiple repositories representing different microservices.
+
+### 🚀 Pipeline Steps
+
+* **Clone Repositories**: Fetch source code for each microservice.
+* **Build & Test**: Independently process each repo.
+* **Deploy**: Deploy services together or independently.
+
+### GitHub Actions Example
+
+```yaml
+name: Multi-Repository CI/CD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Service 1
+        uses: actions/checkout@v2
+        with:
+          repository: user/service1
+
+      - name: Build Service 1
+        run: docker build -t service1:$GITHUB_SHA .
+
+      - name: Checkout Service 2
+        uses: actions/checkout@v2
+        with:
+          repository: user/service2
+
+      - name: Build Service 2
+        run: docker build -t service2:$GITHUB_SHA .
+
+      - name: Deploy Services
+        run: |
+          kubectl apply -f service1/k8s/deployment.yaml
+          kubectl apply -f service2/k8s/deployment.yaml
+```
+
+### 🔑 Key Concepts
+
+* **Multi-Repo CI/CD**: Coordination across services.
+* **Independent Pipelines**: Flexibility to update individual services.
+
+---
+
+## 18. Self-Healing CI/CD Pipeline
+
+### 🌟 Objective
+
+Automatically detect failures and recover deployments.
+
+### 🚀 Pipeline Steps
+
+* **Deploy Application**: Initiate deployment.
+* **Monitor Health**: Use scripts to validate application state.
+* **Auto-Heal**: Trigger rollback or redeployment if failure is detected.
+
+### Jenkinsfile Example
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Deploy Application') {
+            steps {
+                script {
+                    sh "kubectl apply -f k8s/deployment.yaml"
+                }
+            }
+        }
+        stage('Monitor Health') {
+            steps {
+                script {
+                    def result = sh(script: 'kubectl get pods -o jsonpath="{.items[0].status.phase}"', returnStdout: true).trim()
+                    if (result != 'Running') {
+                        error "Application is not running!"
+                    }
+                }
+            }
+        }
+        stage('Auto-Healing') {
+            when {
+                failure()
+            }
+            steps {
+                script {
+                    sh "kubectl rollout undo deployment/myapp"
+                }
+            }
+        }
+    }
+}
+```
+
+### 🔑 Key Concepts
+
+* **Self-Healing**: Automated failure detection and recovery.
+* **Resilience**: Increase uptime and deployment reliability.
+
+---
+
+## 19. Cloud-Native Deployment with Terraform + Kubernetes
+
+### 🌟 Objective
+
+Provision cloud infrastructure and deploy a Kubernetes-native application.
+
+### 🚀 Pipeline Steps
+
+* **Provision Infrastructure**: Use Terraform to create cloud resources (VPC, EC2, EKS, etc.).
+* **Deploy to Kubernetes**: Apply deployment and service YAMLs.
+
+### GitHub Actions Example
+
+```yaml
+name: Cloud-Native App Pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  infrastructure_and_deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+
+      - name: Deploy to Kubernetes
+        run: kubectl apply -f k8s
+```
+
+### 🔑 Key Concepts
+
+* **IaC + Kubernetes**: Declarative provisioning and app delivery.
+* **GitHub Actions**: Automate cloud-native deployments.
+
