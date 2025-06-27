@@ -634,18 +634,18 @@ Six perspectives:
 
 * **Desired outcomes**: Know current state, desired state, problem to solve
 
-###☁️ Serverless
+### ☁️ Serverless
    
    – no provisioning, automatic scaling, fault tolerance
 
-###🧠 Artificial Intelligence – Services
+### 🧠 Artificial Intelligence – Services
 
   * Amazon Transcribe (speech-to-text)
   * Amazon Comprehend (text patterns)
   * Amazon Fraud Detector (detect fraud)
   * Amazon Lex (chatbots)
 
-###🤖 Machine Learning
+### 🤖 Machine Learning
 
   * Amazon SageMaker for fast ML development
   * Predict outcomes, analyze data, solve complex problems.
