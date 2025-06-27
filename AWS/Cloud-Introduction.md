@@ -662,3 +662,116 @@ Six perspectives:
 
   * Predict outcomes, analyze data, solve complex problems
 
+
+## ✅ Module 10: 🧭 The Cloud Journey
+
+#### 🏛️ AWS Well-Architected Framework
+
+Helps us design and operate reliable, secure, efficient, and cost-effective systems:
+
+1. **⚙️ Operational Excellence** – Run and monitor systems to deliver business value and improve continuously
+2. **🔐 Security** – Protect information and systems with risk mitigation strategies
+3. **🔁 Reliability** – Recover from failures and scale with demand
+4. **⚡ Performance Efficiency** – Use computing resources efficiently as demand evolves
+5. **💸 Cost Optimization** – Deliver value at the lowest cost
+6. **🌱 Sustainability** – Reduce energy consumption and improve resource efficiency
+
+#### ☁️ Benefits of the AWS Cloud
+
+Six key advantages:
+
+1. Trade capital expense for variable cost
+2. Massive economies of scale
+3. Stop guessing capacity
+4. Increase speed and agility
+5. Eliminate data center maintenance
+6. Go global in minutes
+
+#### 📊 AWS Config
+
+* Provides historical and real-time view of AWS resource configuration
+* Track configuration changes over time
+
+#### 🔐 Amazon Cognito
+
+* User authentication, authorization, and management
+* Supports direct login or federated identity (Google, Facebook, Apple)
+* **User pools** for sign-up/sign-in, **Identity pools** for AWS access
+
+#### 🏛️ AWS Organizations
+
+* Manage and consolidate multiple AWS accounts
+* Centralized billing and policy enforcement
+
+#### 💡 Amazon LightSail
+
+* Simplified server deployment with automatic networking and security setup
+
+#### 🧮 AWS Batch
+
+* Run batch computing jobs without managing infrastructure
+* Automatically provisions compute as needed
+
+#### 🧾 AWS CloudTrail Logs
+
+* Track AWS API activity across accounts
+* Delivers logs to S3 or CloudTrail Lake
+
+#### 💻 AWS Code Tools
+
+* **CodeStar** – unified UI for software dev lifecycle
+* **CodeCommit** – managed Git source control
+* **CodeDeploy** – automates deployments to EC2/on-prem
+* **CodePipeline** – CI/CD automation for builds & releases
+* **CodeGuru** – reviews code and finds expensive lines or bugs
+
+#### 🗃️ Amazon FSx
+
+* Fully managed Microsoft Windows file servers
+* Supports Windows-native apps and features
+
+#### 🛢️ Amazon Aurora
+
+* Highly available, scalable relational DB with serverless and cross-region support
+
+#### 🔑 AWS KMS
+
+* Key management for data encryption
+
+#### 📥 Amazon Kinesis
+
+* Real-time data stream ingestion and analytics
+
+#### 🔍 Amazon Athena
+
+* Serverless SQL queries directly on S3
+
+#### 🌍 Amazon CloudFront
+
+* Global content delivery network (CDN) for faster access to web content
+
+#### 📚 AWS Knowledge Center
+
+* FAQs, tutorials, and best practices
+
+#### 🆘 AWS Support Center
+
+* Access to technical experts and case tracking
+
+#### 🕵️ Amazon Macie
+
+* ML-powered sensitive data discovery and protection
+
+#### 📊 Amazon QuickSight
+
+* BI and dashboarding for interactive analytics and reporting
+
+#### 🏗️ AWS CloudFormation
+
+* Infrastructure as code service to provision/manage resources consistently
+
+#### 📜 AWS Certificate Manager
+
+* Easily manage SSL/TLS certs for secure connections
+
+
