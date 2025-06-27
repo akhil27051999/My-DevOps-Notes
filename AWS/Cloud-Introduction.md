@@ -515,46 +515,46 @@ AWS and the customer share responsibility for security and compliance.
 
 # 💲 Module 8: Pricing and Support
 
-## 📦 AWS Free Tier
+### 📦 AWS Free Tier
 
 * Always Free, 12 Months Free, and Trials
 * Review specific resource limits to avoid unexpected charges
 
-## 📈 AWS Pricing Concepts
+### 📈 AWS Pricing Concepts
 
 * **Pay-as-you-go**: Pay only for what you use
 * **Reserved pricing**: Discount for long-term usage (e.g. EC2 Savings Plans)
 * **Volume discounts**: Per-unit cost decreases with higher usage (e.g. S3 storage)
 
-## 📊 AWS Pricing Calculator
+### 📊 AWS Pricing Calculator
 
 * Estimate AWS costs by service, resource type, and region
 * Compare options (e.g. EC2 instance types) before deployment
 
-## 💳 Billing Dashboard
+### 💳 Billing Dashboard
 
 * Monitor usage and costs
 * Compare current and past bills
 * Access Cost Explorer, budgets, and reports
 
-## 📆 Consolidated Billing
+### 📆 Consolidated Billing
 
 * Single bill across accounts in AWS Organizations
 * Share discounts (e.g. Reserved Instances, Savings Plans)
 * Helps with visibility and cost optimization
 
-## 💸 AWS Budgets
+### 💸 AWS Budgets
 
 * Set usage or cost limits
 * Receive alerts when nearing or exceeding thresholds
 * Example: Alert when EC2 usage exceeds \$100
 
-## 📉 AWS Cost Explorer
+### 📉 AWS Cost Explorer
 
 * Visualize usage and spending patterns
 * Analyze by service, time, region, and more
 
-## 🔧 AWS Support Plans
+### 🔧 AWS Support Plans
 
 * **Basic**: Free, access to documentation and limited Trusted Advisor
 * **Developer**: Best practice guidance and diagnostic tools
@@ -562,12 +562,12 @@ AWS and the customer share responsibility for security and compliance.
 * **Enterprise On-Ramp**: TAM pool, faster response times
 * **Enterprise**: Dedicated TAM, concierge support, architecture reviews
 
-## 🔝 Technical Account Manager (TAM)
+### 🔝 Technical Account Manager (TAM)
 
 * Helps guide large-scale architecture decisions
 * Provides AWS expertise, cost optimization, and performance tuning
 
-## 🌐 AWS Marketplace
+### 🌐 AWS Marketplace
 
 * Discover, test, and deploy 3rd-party solutions
 * Organized by use case (e.g. DevOps, ML, Healthcare)
