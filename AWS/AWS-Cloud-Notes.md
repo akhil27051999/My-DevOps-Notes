@@ -240,7 +240,7 @@ Distributes incoming traffic across EC2 instances.
 * **Internet Gateway**: Enables public access to VPC
 * **Virtual Private Gateway**: Connects VPC to on-prem via VPN
 
-### 🚪 AWS Direct Connect
+## 🚪 AWS Direct Connect
 
 * Private dedicated connection to AWS
 * Bypasses public internet, increases reliability and bandwidth
