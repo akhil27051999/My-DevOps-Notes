@@ -307,6 +307,115 @@ Factors to consider:
 
 ---
 
+# ☁️ AWS: Practical Examples
+
+This README contains a curated set of beginner-to-intermediate AWS tasks and concepts to help you learn AWS infrastructure and services with real-world analogies.
+
+---
+
 ## 📊 Module 5: Storage and Database
 
-(Next section content will be added here...)
+### 📂 Instance Stores
+
+Block-level storage volumes behave like physical hard drives.
+An instance store provides temporary block-level storage for an Amazon EC2 instance. An instance store is disk storage that is physically attached to the host computer for an EC2 instance, and therefore has the same lifespan as the instance. When the instance is terminated, you lose any data in the instance store.
+
+### 📀 Amazon Elastic Block Store (Amazon EBS)
+
+Amazon Elastic Block Store (Amazon EBS) is a service that provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available.
+
+To create an EBS volume, you define the configuration (such as volume size and type) and provision it. After you create an EBS volume, it can attach to an Amazon EC2 instance.
+
+**Amazon EBS Snapshots:**
+
+* An EBS snapshot is an incremental backup. This means that the first backup taken of a volume copies all the data. For subsequent backups, only the blocks of data that have changed since the most recent snapshot are saved.
+
+### 📁 Object Storage
+
+In object storage, each object consists of:
+
+* **Data**: Any file such as image, video, document
+* **Metadata**: Info about the data (type, size, usage)
+* **Key**: Unique identifier
+
+### 💾 Amazon S3 (Simple Storage Service)
+
+Amazon S3 stores data as **objects in buckets** and offers:
+
+* Unlimited storage
+* Max object size: 5 TB
+* Versioning support
+
+**Use Cases:**
+
+* Website media files
+* App backups
+* Document archives
+
+**Storage Classes:**
+
+* **S3 Standard**: Frequently accessed data
+* **S3 Standard-IA**: Infrequent access, lower cost
+* **S3 One Zone-IA**: Infrequent access, stored in 1 AZ
+* **S3 Intelligent-Tiering**: Auto moves between tiers
+* **S3 Glacier Instant Retrieval**: Archive, fast access
+* **S3 Glacier Flexible Retrieval**: Archive, mins to hours
+* **S3 Glacier Deep Archive**: Archive, 12-48 hours
+* **S3 Outposts**: Object storage on AWS Outposts (on-prem)
+
+### 📂 Amazon EFS (Elastic File System)
+
+* File storage solution for EC2 and on-prem
+* Automatically scales up/down
+* Use case: Multiple servers accessing shared files
+
+### 📊 Amazon RDS (Relational Database Service)
+
+* Managed relational DB service
+* Automates: backups, patching, provisioning
+* Supports encryption at rest and in transit
+
+**Supported Engines:**
+
+* Amazon Aurora
+* PostgreSQL
+* MySQL
+* MariaDB
+* Oracle
+* SQL Server
+
+**Amazon Aurora**:
+
+* Enterprise-level
+* Compatible with MySQL/PostgreSQL
+* 5x faster than MySQL
+* Replicates across 3 AZs
+
+### 🔀 Amazon DynamoDB (Nonrelational)
+
+* Key-value database
+* Fast at any scale
+* Ideal for applications with flexible schemas
+
+### 📊 Amazon Redshift
+
+* Data warehouse service
+* Analyzes big data from multiple sources
+
+### ⏫ AWS Database Migration Service (AWS DMS)
+
+* Migrate relational and nonrelational DBs
+* Source DB stays online during migration
+* Supports heterogeneous migrations
+
+### 🔎 Additional DB Services
+
+* **Amazon DocumentDB**: Document DB for MongoDB
+* **Amazon Neptune**: Graph DB for connected datasets
+* **Amazon QLDB**: Ledger DB with immutable history
+* **Amazon Managed Blockchain**: Build/manage blockchain networks
+* **Amazon ElastiCache**: In-memory cache (Redis, Memcached)
+* **DynamoDB Accelerator (DAX)**: In-memory cache for DynamoDB
+
+---
+
