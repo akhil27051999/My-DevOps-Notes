@@ -48,7 +48,7 @@ A **client** is an application (like a browser or desktop app) that sends reques
 
 # ⚙️ Module 2: Amazon EC2
 
-## 💜 What is Amazon EC2?
+## 💜 Amazon EC2?
 
 Amazon EC2 (Elastic Compute Cloud) is a virtual server in the cloud, offering secure and resizable compute capacity.
 
@@ -393,7 +393,7 @@ Amazon S3 stores data as **objects in buckets** and offers:
 
 ---
 
-# ✅ Module 6: 🔐 Security
+# 🔐 Module 6: Security
 
 ## 1. 🛡️ Shared responsibility model
 
