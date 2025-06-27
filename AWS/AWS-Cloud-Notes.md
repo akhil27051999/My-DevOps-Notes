@@ -179,7 +179,7 @@ Distributes incoming traffic across EC2 instances.
 
 ### 🌍 Selecting a Region
 
-Factors to consider:
+**Factors to consider:**
 
 * **Compliance**: Follow legal/data regulations (e.g. GDPR)
 * **Proximity**: Reduce latency by deploying closer to users
