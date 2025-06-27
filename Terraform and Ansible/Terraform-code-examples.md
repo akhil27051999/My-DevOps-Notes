@@ -1,9 +1,5 @@
 # ☁️ Terraform on AWS: Practical Examples
 
-This README contains a curated set of beginner-to-intermediate Terraform tasks to help you learn AWS infrastructure provisioning using Terraform.
-
----
-
 ## 1. 🚀 EC2 Instance
 
 ### Objective
