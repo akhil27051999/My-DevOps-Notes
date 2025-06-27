@@ -594,3 +594,71 @@ AWS and the customer share responsibility for security and compliance.
 * Organized by use case (e.g. DevOps, ML, Healthcare)
 * Includes pricing, reviews, and support details
 
+
+## ✅ Module 9: 🚚 Migration and Innovation
+
+#### 🌐 AWS Cloud Adoption Framework (AWS CAF)
+
+Six perspectives:
+
+* **💼 Business Perspective** – Aligns IT with business needs.
+
+  * Roles: Business managers, Finance managers, Budget owners, Strategy stakeholders
+
+* **👥 People Perspective** – Develops org-wide change strategy.
+
+  * Roles: HR, Staffing, People managers
+
+* **📊 Governance Perspective** – Aligns IT and business strategy.
+
+  * Roles: CIO, Program managers, Enterprise architects, Business analysts
+
+* **🖥️ Platform Perspective** – Migration and new cloud solution design.
+
+  * Roles: CTO, IT managers, Solution architects
+
+* **🔐 Security Perspective** – Ensures visibility, auditability, control.
+
+  * Roles: CTO, IT managers, IT security analysts
+
+* **🔧 Operational Perspective** – Run and recover IT workloads.
+
+  * Roles: IT ops managers, IT support managers
+
+#### 🚀 Migration Strategies – The 6 R’s
+
+1. **🔄 Rehosting** – lift and shift
+2. **🔧 Re-platforming** – minor tweaks for cloud optimizations
+3. **🏗️ Refactoring/Re-architecting** – rebuild with cloud-native features
+4. **🛒 Repurchasing** – move to SaaS model
+5. **📦 Retaining** – keep in current environment
+6. **🗑️ Retiring** – remove obsolete apps
+
+#### 📦 AWS Snow Family
+
+* **🧊 Snowcone** – small edge device (2 CPUs, 4GB RAM, 8TB storage)
+
+* **❄️ Snowball** – larger scale
+
+  * *Storage Optimized*: 80TB HDD + 1TB SSD, 40 vCPUs, 80 GiB RAM
+  * *Compute Optimized*: 42TB HDD, 7.68TB NVMe SSD, 52 vCPUs, 208 GiB RAM, optional GPU
+
+* **🚛 Snowmobile** – 45-foot truck, up to 100PB per unit
+
+#### 💡 Innovate with AWS
+
+* **Desired outcomes**: Know current state, desired state, problem to solve
+
+* **☁️ Serverless** – no provisioning, automatic scaling, fault tolerance
+
+* **🧠 Artificial Intelligence** – Services:
+
+  * Amazon Transcribe (speech-to-text)
+  * Amazon Comprehend (text patterns)
+  * Amazon Fraud Detector (detect fraud)
+  * Amazon Lex (chatbots)
+
+* **🤖 Machine Learning** – Amazon SageMaker for fast ML development
+
+  * Predict outcomes, analyze data, solve complex problems
+
