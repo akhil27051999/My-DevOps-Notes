@@ -191,7 +191,6 @@ Default credentials: `admin / admin`
 * Alerting on service health.
 * Visualizing Kubernetes cluster state.
 
----
 
 ## 🛠️ Real-time Troubleshooting
 
