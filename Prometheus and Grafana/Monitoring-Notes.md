@@ -1,7 +1,5 @@
 # 📘 Prometheus and Grafana Complete Notes for Observability Engineer Interviews
 
----
-
 ## 📊 Prometheus - In-depth Notes
 
 ### 1. What is Prometheus?
