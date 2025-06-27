@@ -619,8 +619,6 @@ AWS and the customer share responsibility for security and compliance.
 
 ## 💡 Innovate with AWS
 
-* **Desired outcomes**: Know current state, desired state, problem to solve
-
 ### ☁️ Serverless
   * no provisioning, automatic scaling, fault tolerance
 
@@ -652,7 +650,7 @@ Helps us design and operate reliable, secure, efficient, and cost-effective syst
 
 ## ☁️ Benefits of the AWS Cloud
 
-Six key advantages:
+**Six key advantages:**
 
 1. Trade capital expense for variable cost
 2. Massive economies of scale
