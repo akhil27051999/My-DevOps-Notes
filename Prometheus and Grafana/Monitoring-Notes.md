@@ -192,7 +192,7 @@ Default credentials: `admin / admin`
 * Visualizing Kubernetes cluster state.
 
 
-## 🛠️ Real-time Troubleshooting
+# 🛠️ Real-time Troubleshooting
 
 ### Prometheus Issues
 
@@ -284,6 +284,3 @@ Default credentials: `admin / admin`
 * PromQL Cheatsheet: [https://promlabs.com/promql-cheat-sheet](https://promlabs.com/promql-cheat-sheet)
 * Grafana Dashboards: [https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards)
 
----
-
-Let me know if you want full Kubernetes monitoring with Helm and kube-prometheus-stack.
