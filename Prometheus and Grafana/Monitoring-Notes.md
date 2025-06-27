@@ -275,8 +275,6 @@ Default credentials: `admin / admin`
    * Error rate > 5%
 8. **Integrate Slack/Email** in Alertmanager.
 
----
-
 ## 📚 References
 
 * Prometheus Docs: [https://prometheus.io/docs](https://prometheus.io/docs)
