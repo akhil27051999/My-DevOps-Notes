@@ -245,12 +245,12 @@ Factors to consider:
 * Isolated section of AWS Cloud to launch resources
 * Group resources using subnets (public/private)
 
-## 🌍 Internet Gateway & VPN Gateway
+### 🌍 Internet Gateway & VPN Gateway
 
 * **Internet Gateway**: Enables public access to VPC
 * **Virtual Private Gateway**: Connects VPC to on-prem via VPN
 
-## 🚪 AWS Direct Connect
+#$# 🚪 AWS Direct Connect
 
 * Private dedicated connection to AWS
 * Bypasses public internet, increases reliability and bandwidth
@@ -365,24 +365,24 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * 5x faster than MySQL
 * Replicates across 3 AZs
 
-## 🔀 Amazon DynamoDB (Nonrelational)
+### 🔀 Amazon DynamoDB (Nonrelational)
 
 * Key-value database
 * Fast at any scale
 * Ideal for applications with flexible schemas
 
-## 📊 Amazon Redshift
+### 📊 Amazon Redshift
 
 * Data warehouse service
 * Analyzes big data from multiple sources
 
-## ⏫ AWS Database Migration Service (AWS DMS)
+### ⏫ AWS Database Migration Service (AWS DMS)
 
 * Migrate relational and nonrelational DBs
 * Source DB stays online during migration
 * Supports heterogeneous migrations
 
-## 🔎 Additional DB Services
+### 🔎 Additional DB Services
 
 * **Amazon DocumentDB**: Document DB for MongoDB
 * **Amazon Neptune**: Graph DB for connected datasets
@@ -395,7 +395,7 @@ Amazon S3 stores data as **objects in buckets** and offers:
 
 # 🔐 Module 6: Security
 
-## 1. 🛡️ Shared responsibility model
+## 🛡️ Shared responsibility model
 
 **The AWS shared responsibility model**
 
@@ -406,7 +406,7 @@ AWS and the customer share responsibility for security and compliance.
 
 **🏠 Analogy**: AWS builds the house (cloud infrastructure), and the customer locks the doors and windows (data, apps, access control).
 
-## 2. 👥 IAM: Users, Policies, Roles, MFA
+## 👥 IAM: Users, Policies, Roles, MFA
 
 **AWS Identity and Access Management (IAM)** provides:
 
@@ -424,7 +424,7 @@ AWS and the customer share responsibility for security and compliance.
 * Use IAM roles over long-lived credentials
 * Enforce MFA for critical users
 
-## 3. 🏢 AWS Organizations
+### 🏢 AWS Organizations
 
 **AWS Organizations** allows centralized management of multiple accounts:
 
@@ -432,12 +432,12 @@ AWS and the customer share responsibility for security and compliance.
 * **Service Control Policies (SCPs)** – set permission guardrails for accounts
 * Use **consolidated billing** and apply compliance controls via SCPs
 
-## 4. 📋 Compliance
+### 📋 Compliance
 
 * **WS Artifact** – access AWS compliance reports and agreements
 * **Customer Compliance Center** – whitepapers, audit guides, learning path for auditors
 
-## 5. 🚫 Denial-of-Service (DoS/DDoS) Attacks
+### 🚫 Denial-of-Service (DoS/DDoS) Attacks
 
 **DoS** = one source overwhelms app/network.
 **DDoS** = multiple sources or bots flood app/network.
@@ -447,25 +447,25 @@ AWS and the customer share responsibility for security and compliance.
 * **AWS Shield Standard** – free, automatic mitigation for common attacks
 * **AWS Shield Advanced** – paid, advanced detection & support, integrates with CloudFront, WAF, Route 53, ELB
 
-## 6. 🔑 AWS KMS (Key Management Service)
+### 🔑 AWS KMS (Key Management Service)
 
 * Create/manage encryption keys
 * Perform encryption in transit and at rest
 * Control access to keys via IAM policies
 
-## 7. 🌐 AWS WAF (Web Application Firewall)
+### 🌐 AWS WAF (Web Application Firewall)
 
 * Protects applications from malicious traffic
 * Use **Web ACLs** to allow/deny requests based on IPs, patterns, headers, etc.
 * Integrates with CloudFront and ALB
 
-## 8. 🔍 Amazon Inspector
+### 🔍 Amazon Inspector
 
 * Automated security assessment tool
 * Identifies vulnerabilities like exposed ports or outdated packages
 * Generates prioritized findings with remediation suggestions
 
-## 9. 🧠 Amazon GuardDuty
+### 🧠 Amazon GuardDuty
 
 * Intelligent threat detection for AWS accounts
 * Analyzes VPC Flow Logs, DNS logs, CloudTrail events
