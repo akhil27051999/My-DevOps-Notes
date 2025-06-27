@@ -160,4 +160,3 @@ kubectl top pod
 kubectl apply -f deployment.yaml
 ```
 
-Let me know if you'd like behavioral questions or mock interview scenarios added too.
