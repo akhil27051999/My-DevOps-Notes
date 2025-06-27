@@ -283,7 +283,7 @@ Distributes incoming traffic across EC2 instances.
 Block-level storage volumes behave like physical hard drives.
 An instance store provides temporary block-level storage for an Amazon EC2 instance. An instance store is disk storage that is physically attached to the host computer for an EC2 instance, and therefore has the same lifespan as the instance. When the instance is terminated, you lose any data in the instance store.
 
-## 📀 Amazon Elastic Block Store (Amazon EBS)
+### 📀 Amazon Elastic Block Store (Amazon EBS)
 
 Amazon Elastic Block Store (Amazon EBS) is a service that provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available.
 
@@ -301,7 +301,7 @@ In object storage, each object consists of:
 * **Metadata**: Info about the data (type, size, usage)
 * **Key**: Unique identifier
 
-## 📀 Amazon S3 (Simple Storage Service)
+### 📀 Amazon S3 (Simple Storage Service)
 
 Amazon S3 stores data as **objects in buckets** and offers:
 
