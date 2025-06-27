@@ -1,6 +1,4 @@
-# 📘 Prometheus and Grafana Complete Notes for Observability Engineer Interviews
-
-## 📊 Prometheus - In-depth Notes
+# 📊 Prometheus
 
 ### 1. What is Prometheus?
 
@@ -132,9 +130,7 @@ receivers:
         send_resolved: true
 ```
 
----
-
-## 📈 Grafana - In-depth Notes
+# 📈 Grafana
 
 ### 1. What is Grafana?
 
