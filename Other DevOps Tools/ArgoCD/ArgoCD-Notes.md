@@ -99,9 +99,7 @@ handlers:
       state: restarted
 ```
 
----
-
-## 🛠️ Ansible Troubleshooting Scenarios
+# 🛠️ Ansible Troubleshooting Scenarios
 
 ### 1. **SSH Connectivity Issues**
 
@@ -150,7 +148,6 @@ handlers:
 * Use `gather_facts: true`.
 * Run the `setup` module manually.
 
----
 
 ## ✅ Best Practices (Ansible)
 
@@ -235,7 +232,6 @@ It synchronizes application manifests in Git repositories with live Kubernetes c
 * Ensure it is defined in the correct namespace.
 * Verify `argocd app create` was successful.
 
----
 
 ## ✅ Best Practices (Argo CD)
 
