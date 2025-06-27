@@ -406,7 +406,7 @@ AWS and the customer share responsibility for security and compliance.
 
 **Root user** has full access — should be protected and rarely used.
 
-**✅ Best practices**:
+**Best practices**:
 
 * Grant least privilege
 * Use IAM roles over long-lived credentials
@@ -414,7 +414,7 @@ AWS and the customer share responsibility for security and compliance.
 
 ### 🏢 AWS Organizations
 
-**AWS Organizations** allows centralized management of multiple accounts:
+* **AWS Organizations** allows centralized management of multiple accounts:
 
 * **Organizational Units (OUs)** – group accounts based on structure/policy
 * **Service Control Policies (SCPs)** – set permission guardrails for accounts
@@ -427,8 +427,8 @@ AWS and the customer share responsibility for security and compliance.
 
 ### 🚫 Denial-of-Service (DoS/DDoS) Attacks
 
-**DoS** = one source overwhelms app/network.
-**DDoS** = multiple sources or bots flood app/network.
+* **DoS** = one source overwhelms app/network.
+* **DDoS** = multiple sources or bots flood app/network.
 
 **🛡️ Protection with:**
 
