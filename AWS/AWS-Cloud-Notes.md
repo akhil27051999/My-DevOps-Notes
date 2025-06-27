@@ -565,7 +565,7 @@ AWS and the customer share responsibility for security and compliance.
 
 ## 🌐 AWS Cloud Adoption Framework (AWS CAF)
 
-Six perspectives:
+**Six perspectives:**
 
 #### 1. 💼 Business Perspective
 
