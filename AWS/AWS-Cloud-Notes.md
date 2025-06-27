@@ -44,7 +44,6 @@ A **client** is an application (like a browser or desktop app) that sends reques
 * The **client-server model** is central to how services interact over the internet.
 * Hybrid deployments provide a bridge between legacy systems and cloud-native applications.
 
----
 
 # ⚙️ Module 2: Amazon EC2
 
@@ -178,7 +177,6 @@ Distributes incoming traffic across EC2 instances.
 * **Amazon EKS**: Managed Kubernetes service
 * **AWS Fargate**: Serverless containers for ECS/EKS
 
----
 
 # 🌐 Module 3: Global Infrastructure & Reliability
 
@@ -234,7 +232,6 @@ Factors to consider:
 * Safely and repeatedly deploy stacks
 * Rollbacks on failure
 
----
 
 # 🌐 Module 4: Networking
 
@@ -283,7 +280,6 @@ Factors to consider:
 * Integrates with CloudFront for CDN
 * Directs users to nearest, healthy endpoints
 
----
 
 # 📊 Module 5: Storage and Database
 
@@ -389,7 +385,6 @@ Amazon S3 stores data as **objects in buckets** and offers:
 * **Amazon ElastiCache**: In-memory cache (Redis, Memcached)
 * **DynamoDB Accelerator (DAX)**: In-memory cache for DynamoDB
 
----
 
 # 🔐 Module 6: Security
 
@@ -470,7 +465,6 @@ AWS and the customer share responsibility for security and compliance.
 * Provides actionable alerts for unauthorized behavior or potential threats
 * Can trigger AWS Lambda for automatic remediation
 
----
 
 # 📊 Module 7: Monitoring
 
