@@ -404,13 +404,12 @@ AWS and the customer share responsibility for security and compliance.
 * **🔁 IAM Roles** – temporary access to users/services to perform actions
 * **🔐 MFA (Multi-Factor Authentication)** – adds extra layer of security
 
-**Root user** has full access — should be protected and rarely used.
-
-**Best practices**:
+#### Best practices
 
 * Grant least privilege
 * Use IAM roles over long-lived credentials
 * Enforce MFA for critical users
+* Root user has full access — should be protected and rarely used.
 
 ### 🏢 AWS Organizations
 
