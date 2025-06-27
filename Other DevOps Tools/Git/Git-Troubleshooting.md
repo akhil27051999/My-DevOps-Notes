@@ -210,8 +210,3 @@ git checkout -b <branch-name> <commit-hash>
 git push origin <branch-name>
 ```
 
----
-
-> 💡 These Git troubleshooting scenarios prepare you for real-world DevOps and development challenges.
-
-Let me know if you want similar cheat sheets for GitHub Actions, Jenkins, Docker, Kubernetes, etc.
