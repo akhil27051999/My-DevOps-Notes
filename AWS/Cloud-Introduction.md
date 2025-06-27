@@ -1,77 +1,51 @@
-🌐 Module 1: Introduction to Cloud
+## 🌐 Module 1: Introduction to Cloud
 
-🤝 What is a Client-Server Model?
+### 🤝 What is a Client-Server Model?
 
-A client is an application (like a browser or desktop app) that sends requests, and a server (like an Amazon EC2 instance) responds to those requests. This architecture is the foundation of modern web computing.
+A **client** is an application (like a browser or desktop app) that sends requests, and a **server** (like an Amazon EC2 instance) responds to those requests. This architecture is the foundation of modern web computing.
 
-☁️ Cloud Deployment Models
+---
 
-1️⃣ Cloud-Based Deployment
+## ☁️ Cloud Deployment Models
 
-Entire application stack runs in the cloud.
+### 1️⃣ Cloud-Based Deployment
 
-Migrate legacy apps or build new ones.
+* Entire application stack runs in the cloud.
+* Migrate legacy apps or build new ones.
+* Can use low-level services (like EC2) or managed services (like Lambda).
 
-Can use low-level services (like EC2) or managed services (like Lambda).
+**Example**: An e-commerce platform hosted on EC2, RDS, and S3 within a cloud VPC.
 
-Example: An e-commerce platform hosted on EC2, RDS, and S3 within a cloud VPC.
+### 2️⃣ On-Premises Deployment (Private Cloud)
 
-2️⃣ On-Premises Deployment (Private Cloud)
+* All resources are deployed in a local data center.
+* Uses tools like VMware, KVM, or Hyper-V for virtualization.
+* Offers high control over infrastructure.
 
-All resources are deployed in a local data center.
+**Example**: Banking software running on-prem for compliance.
 
-Uses tools like VMware, KVM, or Hyper-V for virtualization.
+### 3️⃣ Hybrid Deployment
 
-Offers high control over infrastructure.
+* Combines on-premises systems with cloud services.
+* Useful for legacy workloads, compliance, and gradual cloud migration.
 
-Example: Banking software running on-prem for compliance.
+**Example**: Use AWS Glue and Athena for big data while keeping ERP on-prem.
 
-3️⃣ Hybrid Deployment
+---
 
-Combines on-premises systems with cloud services.
+## ✅ Summary Table
 
-Useful for legacy workloads, compliance, and gradual cloud migration.
+| Deployment Model | Location | Use Case Example                    | Benefits                    |
+| ---------------- | -------- | ----------------------------------- | --------------------------- |
+| Cloud-Based      | Cloud    | SaaS, scalable applications         | Scalability, flexibility    |
+| On-Premises      | Local DC | Compliance-heavy legacy systems     | Full control, data locality |
+| Hybrid           | Mixed    | Gradual migration, hybrid analytics | Flexibility, balance        |
 
-Example: Use AWS Glue and Athena for big data while keeping ERP on-prem.
+---
 
-✅ Summary Table
+## 🧠 Key Takeaways
 
-Deployment Model
+* Cloud computing offers multiple deployment models tailored to business and technical needs.
+* The **client-server model** is central to how services interact over the internet.
+* Hybrid deployments provide a bridge between legacy systems and cloud-native applications.
 
-Location
-
-Use Case Example
-
-Benefits
-
-Cloud-Based
-
-Cloud
-
-SaaS, scalable applications
-
-Scalability, flexibility
-
-On-Premises
-
-Local DC
-
-Compliance-heavy legacy systems
-
-Full control, data locality
-
-Hybrid
-
-Mixed
-
-Gradual migration, hybrid analytics
-
-Flexibility, balance
-
-🧠 Key Takeaways
-
-Cloud computing offers multiple deployment models tailored to business and technical needs.
-
-The client-server model is central to how services interact over the internet.
-
-Hybrid deployments provide a bridge between legacy systems and cloud-native applications.
