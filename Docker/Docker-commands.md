@@ -1,6 +1,6 @@
 # 🐳 Docker Commands Cheat Sheet with Explanations
 
-> A complete guide to the most essential Docker CLI commands, grouped by category, with clear explanations and real-world usage examples.
+A complete guide to the most essential Docker CLI commands, grouped by category, with clear explanations and real-world usage examples.
 
 ---
 
