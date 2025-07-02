@@ -127,10 +127,6 @@ Loki is a **log aggregation system** optimized for Kubernetes. It works like Pro
 ```
 
 
-# 🧪 DevOps Monitoring Stack – Payment Microservice Example
-
-This document provides a real-world example of monitoring a **payment microservice** in a Kubernetes environment using the **Prometheus + Grafana + Alertmanager + Loki** stack. It also covers exporters, deployment options, and tool integration summaries.
-
 ---
 
 ## 🧪 DevOps Monitoring Example – Payment Microservice
