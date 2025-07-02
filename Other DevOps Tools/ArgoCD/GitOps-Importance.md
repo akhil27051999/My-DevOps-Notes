@@ -23,7 +23,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 | 📈 **Faster Recovery**        | Git history provides backup and recovery of system states. |
 
 
-## 🔄 GitOps Workflow (Simple Flow)
+### 🔄 GitOps Workflow (Simple Flow)
 
 1. Developer writes or updates Kubernetes YAMLs or Helm charts.
 2. Commits the changes to a Git repository (e.g., GitHub).
@@ -43,7 +43,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 | Consistency        | High – reconciles with Git       | Depends on CI logic and environment       |
 | Security           | Git-based access control         | Depends on CI tool configuration          |
 
-## 🔧 Tools Used in GitOps
+### 🔧 Tools Used in GitOps
 
 | Category          | Tools                              |
 |------------------|-------------------------------------|
@@ -53,7 +53,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 | CI (Optional)     | GitHub Actions, Jenkins, GitLab CI (for testing/building artifacts) |
 
 
-## 🔑 Why GitOps is Important in Modern DevOps
+### 🔑 Why GitOps is Important in Modern DevOps
 
 - Seamless management of **Kubernetes-native applications**.
 - Declarative infrastructure and application deployment.
@@ -63,7 +63,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 
 ---
 
-## ✅ Real-world GitOps Example
+### ✅ Real-world GitOps Example
 
 Suppose you want to update your backend service from `v1.2.0` to `v1.3.0`:
 
@@ -85,8 +85,6 @@ In a traditional CI/CD setup, tools like Jenkins, GitHub Actions, or GitLab CI a
 - Docker Registry (e.g., Docker Hub, Amazon ECR)
 - Kubernetes Cluster
 
----
-
 ### 📦 Traditional CI/CD Flow
 
 1. Developer pushes code to GitHub.
@@ -98,8 +96,6 @@ In a traditional CI/CD setup, tools like Jenkins, GitHub Actions, or GitLab CI a
 4. CI/CD tool deploys the application using:
    - `kubectl apply` or
    - `helm upgrade`
-
----
 
 ### 📌 Example GitHub Actions Flow (Without GitOps)
 
@@ -129,8 +125,7 @@ jobs:
         kubectl apply -f k8s/deployment.yaml
 ```
 
-
-## ❌ Limitations of Traditional CI/CD (Without GitOps)
+### ❌ Limitations of Traditional CI/CD (Without GitOps)
 
 | Limitation                     | Explanation                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
@@ -140,6 +135,7 @@ jobs:
 | ❌ Rollback is Harder          | Requires manual rollback scripts or re-running pipelines.                   |
 | ❌ Drift Can Occur             | Cluster state can diverge if someone uses `kubectl` manually.               |
 
+---
 
 ## ✅ GitOps Solves These Issues
 
@@ -152,7 +148,7 @@ jobs:
 | ✅ Improved Security     | Cluster write access is only granted to GitOps tools, not CI/CD pipelines.   |
 
 
-## 🔁 GitOps Deployment Workflow
+### 🔁 GitOps Deployment Workflow
 
 In GitOps, **CI handles build and test**, while **GitOps handles deployment**.
 
