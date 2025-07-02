@@ -158,6 +158,7 @@ In GitOps, **CI handles build and test**, while **GitOps handles deployment**.
 4. Argo CD **pulls and applies** the updated state to Kubernetes.
 5. Argo CD continuously **reconciles** the actual state with the Git state.
 
+---
 
 ## 👀 Summary Table: GitOps vs Traditional CI/CD
 
