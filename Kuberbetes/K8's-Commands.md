@@ -128,7 +128,5 @@
 - **Helm**: Use `helm install`, `helm upgrade` to manage charts.
 - **Minikube / Kind**: Set up a local cluster for testing.
 
----
-
 📌 **Pro Tip**: Always start with `kubectl get <resource>` → then `describe` → then `logs` or `exec` to debug!
 
