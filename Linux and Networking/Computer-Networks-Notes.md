@@ -1,10 +1,8 @@
 # 🌐 DevOps Networking Readme: Commands, Concepts, and Scripts
 
-## 📘 Core Networking Concepts
-
 Below is a comprehensive breakdown of fundamental networking concepts that every DevOps or Observability Engineer should understand deeply. These concepts are not only crucial in interviews but also for designing, debugging, and maintaining robust systems in production environments.
 
-### 1. OSI Model (7 Layers)
+## 1. OSI Model (7 Layers)
 
 The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and standardize how different networking protocols interact in a network.
 
@@ -18,7 +16,7 @@ The OSI (Open Systems Interconnection) model is a conceptual framework used to u
 
 Understanding the OSI model helps isolate where a network issue is occurring during troubleshooting.
 
-### 2. IP Addressing
+## 2. IP Addressing
 
 Every device on a network is assigned an IP (Internet Protocol) address which uniquely identifies it.
 
@@ -33,7 +31,7 @@ ip addr show       # Show assigned IP addresses
 hostname -I        # Show IPs assigned to the host
 ```
 
-### 3. Subnetting
+## 3. Subnetting
 
 Subnetting divides a large network into smaller, manageable sub-networks. This increases efficiency and enhances security.
 
@@ -54,7 +52,7 @@ Tool:
 ipcalc 192.168.1.0/24  # View subnet info
 ```
 
-### 4. Routing
+## 4. Routing
 
 Routing is the process of forwarding packets from one network to another using routers. It ensures communication between different subnets and networks.
 
@@ -70,7 +68,7 @@ route -n            # Show static routes
 
 Use-case: If packets aren't reaching the destination, a routing issue is likely the cause.
 
-### 5. DNS (Domain Name System)
+## 5. DNS (Domain Name System)
 
 DNS translates human-friendly domain names (like `openai.com`) into IP addresses (like `104.18.12.58`).
 
@@ -87,7 +85,7 @@ Troubleshooting DNS:
 * Check `/etc/resolv.conf`
 * Use alternate resolvers: 8.8.8.8 (Google), 1.1.1.1 (Cloudflare)
 
-### 6. NAT (Network Address Translation)
+## 6. NAT (Network Address Translation)
 
 NAT enables multiple devices with private IPs to share a single public IP when accessing the internet.
 
@@ -106,7 +104,7 @@ Command to view NAT rules:
 sudo iptables -t nat -L -n -v
 ```
 
-### 7. Firewalls & Ports
+## 7. Firewalls & Ports
 
 Firewalls control traffic flow based on rules (IP, port, protocol).
 
@@ -129,7 +127,7 @@ Common Ports:
 * 53: DNS
 * 3306: MySQL
 
-### 8. TCP vs UDP
+## 8. TCP vs UDP
 
 These are Layer 4 (Transport Layer) protocols.
 
@@ -145,7 +143,7 @@ These are Layer 4 (Transport Layer) protocols.
   * Faster, but no reliability guarantees
   * Used for DNS, video streaming, gaming
 
-### 9. Tools & Commands
+## 9. Tools & Commands
 
 A list of essential Linux networking tools:
 
@@ -170,7 +168,7 @@ tcpdump -i eth0 port 80  # Capture HTTP traffic
 
 ---
 
-## ⚙️ Useful Bash Networking Scripts
+# ⚙️ Useful Bash Networking Scripts
 
 ### 1. Ping Test Script
 
@@ -233,7 +231,7 @@ curl -s ifconfig.me
 
 ---
 
-## 🧪 Real-Time Troubleshooting Scenarios
+# 🧪 Real-Time Troubleshooting Scenarios
 
 ### ❗ Issue: Port not reachable
 
