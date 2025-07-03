@@ -33,7 +33,6 @@
 29. Lowercase file names
 30. Monitor open ports
 
----
 
 ## ✅ Script Documentation
 
