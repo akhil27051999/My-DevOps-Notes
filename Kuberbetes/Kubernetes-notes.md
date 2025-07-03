@@ -47,10 +47,6 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 
 # ⚖️ Local Kubernetes vs Cloud-Managed Kubernetes
 
-A comprehensive comparison between running Kubernetes locally and using a managed service like **AWS EKS**, **Google GKE**, or **Azure AKS**.
-
----
-
 ## 🏗️ Feature Comparison
 
 | Feature               | Local Kubernetes                         | Cloud-Managed Kubernetes (EKS/GKE/AKS)        |
