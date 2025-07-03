@@ -125,7 +125,7 @@ Loki is a **log aggregation system** optimized for Kubernetes. It works like Pro
 
 ---
 
-## 🧪 DevOps Monitoring Example – Payment Microservice
+# 🧪 DevOps Monitoring Example – Payment Microservice
 
 Imagine you're monitoring a `payment-service` deployed in Kubernetes. Here's how the observability stack works together:
 
