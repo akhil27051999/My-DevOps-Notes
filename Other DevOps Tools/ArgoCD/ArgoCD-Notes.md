@@ -28,7 +28,7 @@ It synchronizes application manifests in Git repositories with live Kubernetes c
 4. Cluster state is updated.
 
 
-# 🧪 Argo CD Troubleshooting Scenarios
+## 🧪 Argo CD Troubleshooting Scenarios
 
 ### 1. **App not syncing automatically**
 
