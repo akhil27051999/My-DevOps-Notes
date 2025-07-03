@@ -63,7 +63,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 
 ---
 
-### ✅ Real-world GitOps Example
+# 🔁 Real-world GitOps Example
 
 Suppose you want to update your backend service from `v1.2.0` to `v1.3.0`:
 
@@ -72,8 +72,6 @@ Suppose you want to update your backend service from `v1.2.0` to `v1.3.0`:
 3. Argo CD detects the new commit in Git.
 4. It deploys the updated version to your cluster.
 5. If the deployment fails, simply revert the Git commit – Argo CD rolls it back automatically.
-
----
 
 ## 🔁 Traditional CI/CD Workflow (Without GitOps)
 
@@ -137,7 +135,18 @@ jobs:
 
 ---
 
-## ✅ GitOps Solves These Issues
+
+## 🔁 GitOps Deployment Workflow
+
+In GitOps, **CI handles build and test**, while **GitOps handles deployment**.
+
+1. **Developer pushes code**.
+2. **CI builds and pushes Docker image**, then updates the image version in the **deployment YAML** stored in Git.
+3. **GitOps controller (e.g., Argo CD)** detects the commit.
+4. Argo CD **pulls and applies** the updated state to Kubernetes.
+5. Argo CD continuously **reconciles** the actual state with the Git state.
+
+### ✅ GitOps Solves These Issues
 
 | GitOps Advantage        | How It Helps                                                                  |
 |-------------------------|-------------------------------------------------------------------------------|
@@ -147,16 +156,6 @@ jobs:
 | ✅ Drift Detection       | GitOps tools continuously monitor and fix divergence from Git.               |
 | ✅ Improved Security     | Cluster write access is only granted to GitOps tools, not CI/CD pipelines.   |
 
-
-### 🔁 GitOps Deployment Workflow
-
-In GitOps, **CI handles build and test**, while **GitOps handles deployment**.
-
-1. **Developer pushes code**.
-2. **CI builds and pushes Docker image**, then updates the image version in the **deployment YAML** stored in Git.
-3. **GitOps controller (e.g., Argo CD)** detects the commit.
-4. Argo CD **pulls and applies** the updated state to Kubernetes.
-5. Argo CD continuously **reconciles** the actual state with the Git state.
 
 ---
 
