@@ -1,9 +1,5 @@
 # 📘 Kubernetes Commands Cheat Sheet with Explanations
 
-A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands, organized by resource type and use case, with clear explanations for each.
-
----
-
 ## 🔍 Basic Cluster Info & Node Management
 
 | Command | Description |
@@ -13,7 +9,6 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl get nodes` | List all nodes in the cluster. |
 | `kubectl describe node <node-name>` | Show detailed information about a specific node. |
 
----
 
 ## 📦 Working with Pods
 
@@ -26,7 +21,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl exec -it <pod-name> -- /bin/bash` | Access a running container in the pod using bash. |
 | `kubectl delete pod <pod-name>` | Delete a pod; new one will be created if managed by a controller. |
 
----
+
 
 ## 🚀 Deployments, ReplicaSets & StatefulSets
 
@@ -39,7 +34,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl get rs` | List ReplicaSets. |
 | `kubectl get statefulsets` | List StatefulSets for stateful workloads. |
 
----
+
 
 ## 🌐 Services, Networking & Ingress
 
@@ -50,7 +45,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl port-forward svc/<name> <local-port>:<target-port>` | Forward service port to your local machine. |
 | `kubectl get endpoints` | Show internal Pod IPs backing a service. |
 
----
+
 
 ## 🔐 ConfigMaps & Secrets
 
@@ -62,7 +57,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl describe secret <name>` | Decode and display secret contents. |
 | `kubectl get secret <name> -o yaml` | View raw YAML output of a Secret. |
 
----
+
 
 ## 🗂 Namespaces & Resource Management
 
@@ -73,7 +68,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl config set-context --current --namespace=<ns>` | Set default namespace for current context. |
 | `kubectl get resourcequotas` | List ResourceQuotas applied to a namespace. |
 
----
+
 
 ## 📄 YAML & Resource Apply
 
@@ -85,7 +80,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl edit <resource> <name>` | Edit live resource definition in your default editor. |
 | `kubectl get all` | Get all resources (Pods, Services, etc.) in the current namespace. |
 
----
+
 
 ## 📊 Monitoring & Debugging
 
@@ -96,7 +91,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl get events` | View recent cluster events (failures, restarts). |
 | `kubectl describe <resource> <name>` | Drill into any resource to troubleshoot. |
 
----
+
 
 ## ⚙️ Jobs, CronJobs & Autoscaling
 
@@ -106,7 +101,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl get cronjobs` | View all cron jobs. |
 | `kubectl get hpa` | Check HorizontalPodAutoscalers status. |
 
----
+
 
 ## 🔒 RBAC: Access & Security
 
@@ -116,7 +111,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 | `kubectl get roles,rolebindings` | View role-based access in the current namespace. |
 | `kubectl get clusterroles,clusterrolebindings` | View access roles cluster-wide. |
 
----
+
 
 ## 💡 Helpful Tricks & Tips
 
@@ -124,7 +119,7 @@ A comprehensive guide to the most commonly used Kubernetes (`kubectl`) commands,
 - ✅ Use `-o yaml` or `-o json` for machine-readable output.
 - ✅ Use `kubectl explain <resource>` for field-level documentation.
 
----
+
 
 ## 📚 Practice Resources
 
