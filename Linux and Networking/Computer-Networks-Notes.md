@@ -230,8 +230,6 @@ dig openai.com +short
 curl -s ifconfig.me
 ```
 
----
-
 # 🧪 Real-Time Troubleshooting Scenarios
 
 ### ❗ Issue: Port not reachable
@@ -259,9 +257,6 @@ curl -s ifconfig.me
 * ✅ Use `kubectl exec` to `ping` from pod
 * ✅ Validate `iptables` and `network policies`
 
----
-
 ## 📄 References
 
 * [Networking Fundamentals - Cisco Docs](https://www.cisco.com)
-* `man ping`, `man ip`, `man ss`, `man tcpdump`
