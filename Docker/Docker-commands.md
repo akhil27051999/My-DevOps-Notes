@@ -1,9 +1,5 @@
 # 🐳 Docker Commands Cheat Sheet with Explanations
 
-A complete guide to the most essential Docker CLI commands, grouped by category, with clear explanations and real-world usage examples.
-
----
-
 ## 🔧 Docker Installation & Setup
 
 | Command | Description |
@@ -12,7 +8,6 @@ A complete guide to the most essential Docker CLI commands, grouped by category,
 | `docker info` | Display detailed info about Docker environment (images, containers, drivers). |
 | `docker login` | Authenticate to a Docker registry (e.g., Docker Hub). |
 
----
 
 ## 📦 Working with Docker Images
 
@@ -25,7 +20,6 @@ A complete guide to the most essential Docker CLI commands, grouped by category,
 | `docker push <repo>/<image>:<tag>` | Upload an image to Docker Hub or a private registry. |
 | `docker rmi <image>` | Remove a Docker image from your system. |
 
----
 
 ## 🚀 Working with Containers
 
@@ -44,7 +38,6 @@ A complete guide to the most essential Docker CLI commands, grouped by category,
 | `docker rm <container>` | Remove a container. |
 | `docker rm -f <container>` | Force remove a running container. |
 
----
 
 ## 🗂️ Volumes & Data Management
 
@@ -56,7 +49,6 @@ A complete guide to the most essential Docker CLI commands, grouped by category,
 | `docker run -v <volume>:/path/in/container <image>` | Mount a volume inside a container. |
 | `docker volume rm <volume>` | Remove a volume. |
 
----
 
 ## 🌐 Docker Networking
 
@@ -68,7 +60,6 @@ A complete guide to the most essential Docker CLI commands, grouped by category,
 | `docker network connect <network> <container>` | Connect a container to a network. |
 | `docker run --network=<network> <image>` | Start container attached to a specific network. |
 
----
 
 ## 🛠️ Dockerfile & Image Customization
 
@@ -101,7 +92,6 @@ Docker Compose allows you to define and run multi-container Docker applications 
 | `docker-compose build` | Build or rebuild services defined in `docker-compose.yml`. |
 | `docker-compose ps` | List all containers managed by the current Compose setup. |
 
----
 
 ## 📊 Docker Logs & Monitoring
 
@@ -114,7 +104,6 @@ Monitor your running containers and services in real-time.
 | `docker inspect <container or image>` | Return low-level detailed JSON info about a container or image (e.g., IP, mount points, labels). |
 | `docker events` | Stream real-time events from the Docker daemon (e.g., container start/stop). |
 
----
 
 ## 🧼 Docker Cleanup Commands
 
