@@ -223,7 +223,6 @@ Ideal for advanced setups with custom PrometheusRule objects and multi-tenant mo
 | **Alertmanager** | Alerting        | Route alerts to teams/channels   | Prometheus             |
 | **Loki**         | Logging         | Collect & search structured logs | Grafana                |
 
----
 
 ## 🧱 Bonus Tip: Unified Stack = Fast Debugging
 
