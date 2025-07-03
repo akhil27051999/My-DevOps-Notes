@@ -234,8 +234,6 @@ Ideal for advanced setups with custom PrometheusRule objects and multi-tenant mo
 
 Together, these tools form a robust, cloud-native **observability platform** that enables DevOps and SRE teams to monitor, alert, debug, and analyze their systems effectively.
 
----
-
 ## 🧱 Bonus Tip: Unified Stack = Fast Debugging
 
 - High error rate on dashboard? ➡️ Drill down into logs (Loki).
