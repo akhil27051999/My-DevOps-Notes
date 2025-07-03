@@ -1,8 +1,5 @@
 # 🐳 Docker Interview Questions
 
-This document contains the most commonly asked **Docker interview questions** grouped by concept and numbered clearly for quick revision.
-
----
 
 ## 🧱 1. Docker Basics
 
@@ -15,7 +12,7 @@ This document contains the most commonly asked **Docker interview questions** gr
 3. What is the Docker architecture?
    - Key components: Docker Client, Docker Daemon, Docker Images, Docker Containers, Docker Registries.
 
----
+
 
 ## 📦 2. Docker Images & Containers
 
@@ -29,7 +26,7 @@ This document contains the most commonly asked **Docker interview questions** gr
 6. What are image layers?
    - Each instruction in the Dockerfile creates a cached image layer that speeds up builds and reusability.
 
----
+
 
 ## ⚙️ 3. Dockerfile & Image Build
 
@@ -42,7 +39,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 9. What is a multi-stage build?
    - A method to build lean production images by separating build and runtime environments in the Dockerfile.
 
----
 
 ## 📜 4. Docker Compose & Orchestration
 
@@ -56,7 +52,6 @@ This document contains the most commonly asked **Docker interview questions** gr
     - Compose: For local development.  
     - Stack: Used in production with Swarm mode, supports scaling and rolling updates.
 
----
 
 ## 🌐 5. Docker Networking
 
@@ -66,7 +61,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 14. How does networking work between containers?
     - Containers can communicate if they share the same user-defined bridge network, using DNS resolution by container name.
 
----
 
 ## 🗃️ 6. Volumes & Data Management
 
@@ -80,7 +74,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 17. Why use volumes over storing data in containers?
     - Volumes persist data, are portable, efficient, and safer during container updates or removal.
 
----
 
 ## 🔐 7. Docker Security
 
@@ -93,7 +86,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 20. What is the purpose of the .dockerignore file?
     - Prevents unnecessary files from being sent during image build (e.g., `.git`, `node_modules`).
 
----
 
 ## 🧼 8. Debugging & Logging
 
@@ -103,7 +95,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 22. How are container logs managed?
     - Through log drivers like `json-file`, `syslog`, or external log aggregators (e.g., ELK, Fluentd, Loki).
 
----
 
 ## 🗂️ 9. Docker Registries
 
@@ -115,7 +106,6 @@ This document contains the most commonly asked **Docker interview questions** gr
     - `docker push myapp:v1`  
       `docker pull myapp:v1`
 
----
 
 ## ⏱️ 10. Container Lifecycle
 
@@ -125,7 +115,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 26. What happens when a container is stopped?
     - The main process exits. The container is in `Exited` state until manually removed.
 
----
 
 ## 🧰 11. Advanced Docker Features
 
@@ -141,7 +130,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 30. What are Docker health checks?
     - Defined in the Dockerfile using `HEALTHCHECK` to monitor container health.
 
----
 
 ## 🚀 12. Docker Swarm & Scaling
 
@@ -158,7 +146,6 @@ This document contains the most commonly asked **Docker interview questions** gr
 34. How do you roll back services in Swarm?
     - Use `docker service update --rollback`
 
----
 
 ## 🛡️ 13. Secrets Management
 
@@ -168,18 +155,16 @@ This document contains the most commonly asked **Docker interview questions** gr
 36. Why not store secrets in Docker images?
     - It violates security best practices. Secrets in images can be easily extracted.
 
----
 
-## 📚 Tips for Interview
+### 📚 Tips for Interview
 
 - Use real examples (`nginx`, `mysql`) to explain images and volumes.
 - Relate concepts with analogies: Docker image = class, container = object.
 - Know CI/CD pipeline use-cases: Docker with Jenkins, GitHub Actions, or Kubernetes.
 - Always emphasize **security, optimization, and scalability**.
 
----
 
-## ✅ Recommended Practice:  
+### ✅ Recommended Practice:  
  - Try building a full-stack app using Docker Compose.  
  - Use Alpine-based images and multistage builds.  
  - Implement health checks and secret management.
