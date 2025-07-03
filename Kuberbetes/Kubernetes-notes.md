@@ -7,8 +7,6 @@ Kubernetes (K8s) is an 🛠️ open-source container orchestration platform that
 - 📊 Monitoring
 - ⚖️ Load balancing
 
----
-
 ## 🏗️ Kubernetes Architecture
 
 Kubernetes follows a **client-server architecture** with **Master Nodes** and **Worker Nodes**.
