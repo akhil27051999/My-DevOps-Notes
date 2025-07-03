@@ -1,4 +1,4 @@
-# 🌐 DevOps Networking Readme: Commands, Concepts, and Scripts
+# 🌐 DevOps Networking: Commands, Concepts, and Scripts
 
 Below is a comprehensive breakdown of fundamental networking concepts that every DevOps or Observability Engineer should understand deeply. These concepts are not only crucial in interviews but also for designing, debugging, and maintaining robust systems in production environments.
 
