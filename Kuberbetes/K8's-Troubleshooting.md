@@ -1,9 +1,5 @@
 # 🛠️ Kubernetes Troubleshooting Guide
 
-This guide outlines **real-time issues**, **step-by-step debugging techniques**, and **resolutions** to fix problems across all major Kubernetes components.
-
----
-
 ## 📦 1. Pod Issues
 
 ### ❌ Issue: Pod stuck in `CrashLoopBackOff`
@@ -49,7 +45,6 @@ kubectl get nodes
 * Adjust `requests/limits` in pod spec
 * Remove `nodeSelector`, affinity, or taints if needed
 
----
 
 ## 🧠 2. Node Issues
 
@@ -75,7 +70,6 @@ ssh <node> && journalctl -u kubelet
 * Check disk space, CPU
 * Validate CNI plugins are configured
 
----
 
 ## 🌐 3. Service & Networking Issues
 
@@ -116,7 +110,6 @@ kubectl get endpoints <service-name>
 * For NodePort, open the port in cloud firewall
 * Use `curl http://<nodeIP>:<nodePort>` to test
 
----
 
 ## 🌍 4. Ingress Issues
 
@@ -143,7 +136,6 @@ kubectl get pods -n ingress-nginx
 * Match backend service name & port in ingress spec
 * Use correct `host`, `pathType: Prefix`, and TLS secret
 
----
 
 ## 🔒 5. ConfigMap/Secret Issues
 
@@ -167,7 +159,6 @@ kubectl get secret
 * Check `env.valueFrom.configMapKeyRef/secretKeyRef`
 * Ensure resource exists and keys are correct
 
----
 
 ## 🧱 6. Volume & PVC Issues
 
@@ -207,7 +198,6 @@ kubectl get storageclass
 * Validate PVC is `Bound`
 * Inspect volume permissions (`hostPath` issues)
 
----
 
 ## 🚥 7. Scaling & Autoscaling Issues
 
@@ -232,7 +222,6 @@ kubectl describe hpa
 * Ensure target CPU utilization is configured
 * Verify workload supports scaling (e.g., Deployment)
 
----
 
 ## 🧰 8. CI/CD & Image Pull Issues
 
@@ -261,8 +250,6 @@ kubectl create secret docker-registry regcred \
   --docker-password=<pass> \
   --docker-email=<email>
 ```
-
----
 
 ## 🔒 9. RBAC & Permission Issues
 
@@ -298,8 +285,6 @@ kubectl describe rolebinding <rb>
 | Autoscaling | HPA not working  | Install metrics-server         |
 | RBAC        | Forbidden errors | Assign roles/roleBindings      |
 
----
 
-> 💡 **Pro Tip**: Always start with `kubectl describe` and `kubectl logs` — 80% of issues are revealed through them!
+* 💡 **Pro Tip**: Always start with `kubectl describe` and `kubectl logs` — 80% of issues are revealed through them!
 
----
