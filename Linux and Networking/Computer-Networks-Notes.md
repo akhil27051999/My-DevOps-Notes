@@ -167,8 +167,6 @@ tcpdump -i eth0 port 80  # Capture HTTP traffic
 
 * `ping`, `traceroute`, `netstat`, `ss`, `nc`, `tcpdump`, `iftop`, `ip`, `ifconfig`, `nmap`
 
----
-
 # ⚙️ Useful Bash Networking Scripts
 
 ### 1. Ping Test Script
