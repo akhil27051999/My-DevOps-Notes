@@ -19,6 +19,7 @@ Observability is the ability to measure the internal state of a system by examin
 | **Alertmanager** | Alerting    | Sends alerts via email, Slack, PagerDuty |
 | **Loki**       | Logging      | Centralized, structured log aggregation   |
 
+---
 
 ## 📈 Prometheus – Metrics Collection
 
