@@ -31,7 +31,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 4. It **pulls** the new configuration and **applies** it to the Kubernetes cluster.
 5. Cluster state is continuously **reconciled** to match the Git repo.
 
-## 🔍 GitOps vs Traditional CI/CD
+### 🔍 GitOps vs Traditional CI/CD
 
 | Aspect             | GitOps                          | Traditional CI/CD                        |
 |-------------------|----------------------------------|-------------------------------------------|
