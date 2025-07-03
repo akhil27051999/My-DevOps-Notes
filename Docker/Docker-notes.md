@@ -1,9 +1,5 @@
 # 🐳 Complete Docker Concepts for Interview Preparation
 
-This section covers everything you need to master Docker for interviews—concepts, commands, architecture, use cases, troubleshooting, and most-asked interview questions.
-
----
-
 ## 📘 Core Concepts of Docker
 
 | Concept            | Definition                                                                                 |
@@ -19,7 +15,6 @@ This section covers everything you need to master Docker for interviews—concep
 | **Docker Compose** | A tool for defining and running multi-container apps using `docker-compose.yml`.           |
 | **Docker Stack**   | Docker Swarm deployment tool to deploy multi-service applications from a Compose file.     |
 
----
 
 ## 🏗️ Docker Architecture
 
@@ -33,7 +28,6 @@ This section covers everything you need to master Docker for interviews—concep
   * Volumes
   * Networks
 
----
 
 ## 🔨 Most Important Docker Commands (Grouped)
 
@@ -74,7 +68,6 @@ docker network ls                        # List networks
 docker network inspect bridge            # Inspect bridge network
 ```
 
----
 
 ## 📁 Dockerfile Directives
 
@@ -99,7 +92,6 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 ```
 
----
 
 ## 🧱 Docker Compose
 
@@ -140,7 +132,6 @@ docker-compose logs                      # View logs for all services
 docker-compose build                     # Build or rebuild services
 ```
 
----
 
 ## 🐝 Docker Stack (Swarm Mode)
 
@@ -177,7 +168,6 @@ docker stack services mystack           # List running services
 docker stack rm mystack                 # Remove the stack
 ```
 
----
 
 ## 🔍 Docker Use Cases
 
@@ -188,7 +178,6 @@ docker stack rm mystack                 # Remove the stack
 * App portability across cloud and OS
 * High availability deployment using Docker Swarm
 
----
 
 ## 🚨 Docker Troubleshooting
 
@@ -201,7 +190,6 @@ docker stack rm mystack                 # Remove the stack
 | Build context too large    | Large unnecessary files                | Use `.dockerignore`                        |
 | Swarm deployment failure   | Service not reachable or image missing | Inspect `docker service logs`              |
 
----
 
 ## 🧠 Docker Best Practices for Interviews
 
