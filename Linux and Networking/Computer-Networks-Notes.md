@@ -143,16 +143,19 @@ These are Layer 4 (Transport Layer) protocols.
 
 ## 9. Tools & Commands
 
-A list of essential Linux networking tools:
+| Tool        | Description                                  | Example Command                              | Purpose                                  |
+|-------------|----------------------------------------------|----------------------------------------------|------------------------------------------|
+| `ping`      | Tests reachability to a host                 | `ping google.com`                            | Check if a host is online                |
+| `traceroute`| Displays route and latency to a host         | `traceroute google.com`                      | Identify network path and delays         |
+| `netstat` / `ss` | Lists open ports and connections     | `ss -tuln` or `netstat -tuln`                | View listening ports and TCP connections |
+| `nc` (netcat)| Versatile network utility                   | `nc -zv 192.168.1.1 22`                      | Scan open ports on a remote system       |
+| `tcpdump`   | Captures and analyzes packets                | `sudo tcpdump -i eth0`                       | Analyze network traffic on an interface  |
+| `nmap`      | Network scanner for ports & vulnerabilities  | `nmap -sV 192.168.1.1`                       | Scan ports & services on a target host   |
+| `ip`, `ifconfig` | Interface and routing config tools    | `ip a` or `ifconfig`                         | Show IP addresses and interfaces         |
+| `dig`       | DNS lookup and troubleshooting               | `dig example.com`                            | Get DNS records and response times       |
+| `host`      | Simple DNS lookup                            | `host example.com`                           | Get A/AAAA/CNAME records of a domain     |
+| `nslookup`  | Interactive DNS query tool                   | `nslookup example.com`                       | Query specific DNS servers               |
 
-* `ping`: Test reachability to another host
-* `traceroute`: Shows route path and latency
-* `netstat` / `ss`: List open ports and connections
-* `nc` (netcat): Port scanning, banner grabbing
-* `tcpdump`: Packet capture (advanced)
-* `nmap`: Network scanner
-* `ip`, `ifconfig`: Interface and routing info
-* `dig`, `host`, `nslookup`: DNS troubleshooting
 
 Example:
 
