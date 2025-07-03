@@ -1,8 +1,6 @@
 # 📊 Monitoring and Observability with Prometheus, Grafana, Alertmanager, and Loki
 
-This README provides a comprehensive guide to setting up and understanding modern observability tools used in cloud-native environments — especially Kubernetes. It covers four essential tools: **Prometheus**, **Grafana**, **Alertmanager**, and **Loki**.
-
-## 🔍 What Is Observability?
+### 🔍 What Is Observability?
 
 Observability is the ability to measure the internal state of a system by examining the data it produces — metrics, logs, and traces. It allows DevOps and SRE teams to:
 
