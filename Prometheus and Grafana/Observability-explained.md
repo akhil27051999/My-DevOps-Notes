@@ -10,8 +10,6 @@ Observability is the ability to measure the internal state of a system by examin
 - Detect and debug issues faster.
 - Prevent outages through alerting and early detection.
 
----
-
 ## 🧭 Key Tools in the Observability Stack
 
 | Tool           | Category     | Role                                      |
@@ -21,7 +19,6 @@ Observability is the ability to measure the internal state of a system by examin
 | **Alertmanager** | Alerting    | Sends alerts via email, Slack, PagerDuty |
 | **Loki**       | Logging      | Centralized, structured log aggregation   |
 
----
 
 ## 📈 Prometheus – Metrics Collection
 
@@ -141,7 +138,6 @@ Prometheus scrapes metrics from the payment-service, such as:
 - API latency (`request_duration_seconds`)
 - Pod restarts or container status
 
----
 
 ### 📊 Grafana – Visualization
 
@@ -152,7 +148,6 @@ Grafana provides dashboards that display:
 - Uptime and availability of services
 - Traffic patterns or request spikes
 
----
 
 ### 🚨 Alertmanager – Alerting
 
@@ -162,7 +157,6 @@ Alertmanager manages alert routing and deduplication:
 - Triggers PagerDuty if the service is unreachable for more than 2 minutes
 - Groups similar alerts and silences known issues during maintenance
 
----
 
 ### 🪵 Loki – Logging
 
@@ -172,9 +166,8 @@ Loki handles log aggregation from all pods in the cluster:
 - Allows searching logs based on labels like `app="payment-service"`
 - Correlates log events with metrics in Grafana for root cause analysis
 
----
 
-## 🔧 Popular Prometheus Exporters
+### 🔧 Popular Prometheus Exporters
 
 Prometheus collects metrics via exporters. Below are commonly used exporters:
 
@@ -205,7 +198,6 @@ A production-ready and pre-configured Helm chart that includes:
 
 This is the fastest and easiest way to get started.
 
----
 
 ### ⚙️ Prometheus Operator
 
