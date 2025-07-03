@@ -10,7 +10,7 @@ Observability is the ability to measure the internal state of a system by examin
 - Detect and debug issues faster.
 - Prevent outages through alerting and early detection.
 
-## 🧭 Key Tools in the Observability Stack
+### 🧭 Key Tools in the Observability Stack
 
 | Tool           | Category     | Role                                      |
 |----------------|--------------|-------------------------------------------|
