@@ -29,7 +29,6 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 | **Kube Proxy** | Manages networking rules for Pod communication |
 | **Container Runtime** | Executes containers (Docker, containerd) |
 
----
 
 ## 🔑 Key Kubernetes Components
 
@@ -39,7 +38,6 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 - **Services**: Exposes Pods using DNS and load balancing.
 - **Namespaces**: Logical partitioning of cluster resources.
 
----
 
 ## 🚀 Why Kubernetes is Used
 
@@ -49,7 +47,6 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 - 🔋 **Efficiency** – Optimizes resource utilization.
 - 🖥️ **Microservices Friendly** – Perfect for service-oriented apps.
 
----
 
 ## 🌍 Real-World Use Cases
 
@@ -59,7 +56,6 @@ Kubernetes follows a **client-server architecture** with **Master Nodes** and **
 - 📊 Big Data Workloads (Spark, Hadoop)
 - 🌱 IoT Applications (Edge device management)
 
----
 
 ## 🔍 Industry Needs Fulfilled by Kubernetes
 
