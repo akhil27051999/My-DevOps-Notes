@@ -11,7 +11,7 @@ This document provides a detailed explanation of **GitOps**, how it works, its b
 - Use automation controllers (like **Argo CD** or **Flux**) to **sync and reconcile** the actual state in the Kubernetes cluster with Git.
 - Allow **pull-request-based changes** to trigger deployments and infrastructure updates.
 
-## 🚀 Key Benefits of GitOps
+### 🚀 Key Benefits of GitOps
 
 | Feature                   | Description |
 |---------------------------|-------------|
