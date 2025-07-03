@@ -838,7 +838,6 @@ These features are critical when deploying Kubernetes in real-world or enterpris
 - PDB helps during rolling updates to avoid full outages.
 - Affinity/AntiAffinity is useful for HA and zone-aware deployments.
 
----
 
 # ⚙️ 9. Tools for Practice & Real-World Workflow
 
@@ -859,8 +858,6 @@ Use these tools to **practice Kubernetes locally** and **manage production clust
 3. Monitor them via **Lens** or `kubectl`.
 4. Simulate disruptions and autoscaling using **HPA**, **PDB**, and **affinity**.
 5. Use **K9s** for fast debugging and navigation.
-
----
 
 
 
