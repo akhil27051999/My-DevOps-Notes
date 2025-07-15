@@ -430,7 +430,7 @@ AWS and the customer share responsibility for security and compliance.
 * **DoS** = one source overwhelms app/network.
 * **DDoS** = multiple sources or bots flood app/network.
 
-**🛡️ Protection with:**
+### 🛡️ AWS Sheild
 
 * **AWS Shield Standard** – free, automatic mitigation for common attacks
 * **AWS Shield Advanced** – paid, advanced detection & support, integrates with CloudFront, WAF, Route 53, ELB
