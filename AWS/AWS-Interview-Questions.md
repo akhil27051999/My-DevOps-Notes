@@ -250,7 +250,7 @@
 | **7. Design GuardDuty automated remediation workflows.**                   | - **EC2 compromise** → Lambda isolates instance (SG update).<br>- **IAM key compromised** → auto **disable keys & rotate**.<br>- **Suspicious domain calls** → block via **Route 53 Resolver DNS Firewall**.<br>- **Privilege escalation** → trigger alert + revoke session tokens. |
 
 
-AWS Fargate – Interview Q&A (Detailed Table)
+## AWS Fargate – Interview Q&A (Detailed Table)
 | **Question**                                                            | **Detailed Answer**                                                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1. What is AWS Fargate and how is it different from ECS/EKS on EC2?** | Fargate is a **serverless compute engine for containers** that eliminates the need to manage EC2 instances. Unlike ECS/EKS on EC2, you don’t provision servers—Fargate runs tasks directly with automatic scaling.                                              |
